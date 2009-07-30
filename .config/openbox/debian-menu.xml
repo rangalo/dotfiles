@@ -1,0 +1,1405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Automatically generated file. Do not edit (see /usr/share/doc/menu/html) -->
+
+<openbox_menu xmlns="http://openbox.org/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://openbox.org/
+                file:///usr/share/openbox/menu.xsd">
+
+<menu id='Debian' label='Debian'>
+  <menu id='Applications' label='Applications'>
+    <menu id='Accessibility' label='Accessibility'>
+      <item label='KSayIt'>
+        <action name='Execute'><execute>/usr/bin/ksayit</execute></action>
+      </item>
+      <item label='Xmag'>
+        <action name='Execute'><execute>xmag</execute></action>
+      </item>
+    </menu>
+    <menu id='Data Management' label='Data Management'>
+      <item label='KitchenSync'>
+        <action name='Execute'><execute>/usr/bin/kitchensync</execute></action>
+      </item>
+    </menu>
+    <menu id='Editors' label='Editors'>
+      <item label='Emacs 22 (text)'>
+        <action name='Execute'><execute>x-terminal-emulator  -T &quot;Emacs 22 (text)&quot; -e sh -c &quot;/usr/bin/emacs22 -nw&quot;</execute></action>
+      </item>
+      <item label='Emacs 22 (X11)'>
+        <action name='Execute'><execute>/usr/bin/emacs22</execute></action>
+      </item>
+      <item label='GVIM'>
+        <action name='Execute'><execute>/usr/bin/vim.gtk -g -f</execute></action>
+      </item>
+      <item label='KDE SysV-Init Editor'>
+        <action name='Execute'><execute>/usr/bin/ksysv</execute></action>
+      </item>
+      <item label='KEdit'>
+        <action name='Execute'><execute>/usr/bin/kedit</execute></action>
+      </item>
+      <item label='KHexEdit'>
+        <action name='Execute'><execute>/usr/bin/khexedit</execute></action>
+      </item>
+      <item label='Kregexpeditor'>
+        <action name='Execute'><execute>/usr/bin/kregexpeditor</execute></action>
+      </item>
+    </menu>
+    <menu id='File Management' label='File Management'>
+      <item label='K3b'>
+        <action name='Execute'><execute>/usr/bin/k3b</execute></action>
+      </item>
+      <item label='mc'>
+        <action name='Execute'><execute>x-terminal-emulator  -T &quot;mc&quot; -e sh -c &quot;/usr/bin/mc&quot;</execute></action>
+      </item>
+    </menu>
+    <menu id='Graphics' label='Graphics'>
+      <item label='ImageMagick'>
+        <action name='Execute'><execute>/usr/bin/display logo:</execute></action>
+      </item>
+      <item label='KIconEdit'>
+        <action name='Execute'><execute>/usr/bin/kiconedit</execute></action>
+      </item>
+      <item label='xcam'>
+        <action name='Execute'><execute>/usr/bin/xcam</execute></action>
+      </item>
+      <item label='xscanimage'>
+        <action name='Execute'><execute>/usr/bin/xscanimage</execute></action>
+      </item>
+      <item label='X Window Snapshot'>
+        <action name='Execute'><execute>xwd | xwud</execute></action>
+      </item>
+    </menu>
+    <menu id='Network' label='Network'>
+      <menu id='Communication' label='Communication'>
+        <item label='IRC Chat #sidux'>
+          <action name='Execute'><execute>sidux-irc</execute></action>
+        </item>
+        <item label='Irssi'>
+          <action name='Execute'><execute>x-terminal-emulator  -T &quot;Irssi&quot; -e sh -c &quot;/usr/bin/irssi&quot;</execute></action>
+        </item>
+        <item label='KDict'>
+          <action name='Execute'><execute>/usr/bin/kdict</execute></action>
+        </item>
+        <item label='Konversation IRC Client'>
+          <action name='Execute'><execute>/usr/bin/konversation</execute></action>
+        </item>
+        <item label='KSirc'>
+          <action name='Execute'><execute>/usr/bin/ksirc</execute></action>
+        </item>
+        <item label='kvpnc'>
+          <action name='Execute'><execute>su-to-root -X -c kvpnc</execute></action>
+        </item>
+        <item label='Pidgin'>
+          <action name='Execute'><execute>/usr/bin/pidgin</execute></action>
+        </item>
+        <item label='Telnet'>
+          <action name='Execute'><execute>x-terminal-emulator  -T &quot;Telnet&quot; -e sh -c &quot;/usr/bin/telnet&quot;</execute></action>
+        </item>
+        <item label='Xbiff'>
+          <action name='Execute'><execute>xbiff</execute></action>
+        </item>
+      </menu>
+      <menu id='File Transfer' label='File Transfer'>
+        <item label='KTorrent'>
+          <action name='Execute'><execute>ktorrent</execute></action>
+        </item>
+      </menu>
+      <item label='Manhole Twisted Client'>
+        <action name='Execute'><execute>/usr/bin/manhole</execute></action>
+      </item>
+      <menu id='Monitoring' label='Monitoring'>
+        <item label='ISDN Monitor'>
+          <action name='Execute'><execute>x-terminal-emulator  -T &quot;ISDN Monitor&quot; -e sh -c &quot;/usr/bin/imon&quot;</execute></action>
+        </item>
+        <item label='KWifiManager'>
+          <action name='Execute'><execute>/usr/bin/kwifimanager</execute></action>
+        </item>
+      </menu>
+      <item label='Twisted Application Generator'>
+        <action name='Execute'><execute>/usr/bin/tkmktap</execute></action>
+      </item>
+      <item label='Twisted Instance Messenger'>
+        <action name='Execute'><execute>/usr/bin/im</execute></action>
+      </item>
+      <item label='Twisted SSH Client'>
+        <action name='Execute'><execute>/usr/bin/tkconch</execute></action>
+      </item>
+      <menu id='Web Browsing' label='Web Browsing'>
+        <item label='ELinks WWW browser'>
+          <action name='Execute'><execute>x-terminal-emulator  -T &quot;ELinks WWW browser&quot; -e sh -c &quot;/usr/bin/elinks&quot;</execute></action>
+        </item>
+        <item label='Iceweasel'>
+          <action name='Execute'><execute>iceweasel</execute></action>
+        </item>
+        <item label='sidux-browser'>
+          <action name='Execute'><execute>x-www-browser</execute></action>
+        </item>
+      </menu>
+      <menu id='Web News' label='Web News'>
+        <item label='KOrn'>
+          <action name='Execute'><execute>/usr/bin/korn</execute></action>
+        </item>
+      </menu>
+    </menu>
+    <menu id='Programming' label='Programming'>
+      <item label='Data Display Debugger'>
+        <action name='Execute'><execute>/usr/bin/ddd</execute></action>
+      </item>
+      <item label='GDB'>
+        <action name='Execute'><execute>x-terminal-emulator  -T &quot;GDB&quot; -e sh -c &quot;/usr/bin/gdb&quot;</execute></action>
+      </item>
+      <item label='Qt3 Designer'>
+        <action name='Execute'><execute>/usr/bin/designer-qt3</execute></action>
+      </item>
+      <item label='Ruby (irb1.8)'>
+        <action name='Execute'><execute>x-terminal-emulator  -T &quot;Ruby (irb1.8)&quot; -e sh -c &quot;/usr/bin/irb1.8&quot;</execute></action>
+      </item>
+      <item label='Tclsh8.4'>
+        <action name='Execute'><execute>x-terminal-emulator  -T &quot;Tclsh8.4&quot; -e sh -c &quot;/usr/bin/tclsh8.4&quot;</execute></action>
+      </item>
+      <item label='TkWish8.4'>
+        <action name='Execute'><execute>x-terminal-emulator -e /usr/bin/wish8.4</execute></action>
+      </item>
+    </menu>
+    <menu id='Science' label='Science'>
+      <menu id='Mathematics' label='Mathematics'>
+        <item label='Bc'>
+          <action name='Execute'><execute>x-terminal-emulator  -T &quot;Bc&quot; -e sh -c &quot;/usr/bin/bc&quot;</execute></action>
+        </item>
+        <item label='Xcalc'>
+          <action name='Execute'><execute>xcalc</execute></action>
+        </item>
+      </menu>
+    </menu>
+    <menu id='Shells' label='Shells'>
+      <item label='Bash'>
+        <action name='Execute'><execute>x-terminal-emulator  -T &quot;Bash&quot; -e sh -c &quot;/bin/bash --login&quot;</execute></action>
+      </item>
+      <item label='Dash'>
+        <action name='Execute'><execute>x-terminal-emulator  -T &quot;Dash&quot; -e sh -c &quot;/bin/dash -i&quot;</execute></action>
+      </item>
+      <item label='Python (v2.4)'>
+        <action name='Execute'><execute>x-terminal-emulator  -T &quot;Python (v2.4)&quot; -e sh -c &quot;/usr/bin/python2.4&quot;</execute></action>
+      </item>
+      <item label='Python (v2.5)'>
+        <action name='Execute'><execute>x-terminal-emulator  -T &quot;Python (v2.5)&quot; -e sh -c &quot;/usr/bin/python2.5&quot;</execute></action>
+      </item>
+      <item label='Root Shell'>
+        <action name='Execute'><execute>x-terminal-emulator  -T &quot;Root Shell&quot; -e sh -c &quot;su-to-root -c /bin/bash&quot;</execute></action>
+      </item>
+      <item label='Sh'>
+        <action name='Execute'><execute>x-terminal-emulator  -T &quot;Sh&quot; -e sh -c &quot;/bin/sh --login&quot;</execute></action>
+      </item>
+    </menu>
+    <menu id='Sound' label='Sound'>
+      <item label='aRts Builder'>
+        <action name='Execute'><execute>/usr/bin/artsbuilder</execute></action>
+      </item>
+      <item label='aRts Control'>
+        <action name='Execute'><execute>/usr/bin/artscontrol</execute></action>
+      </item>
+      <item label='Audacious'>
+        <action name='Execute'><execute>/usr/bin/audacious</execute></action>
+      </item>
+      <item label='aumix (GTK)'>
+        <action name='Execute'><execute>/usr/bin/aumix</execute></action>
+      </item>
+      <item label='ncmpc'>
+        <action name='Execute'><execute>x-terminal-emulator  -T &quot;ncmpc&quot; -e sh -c &quot;/usr/bin/ncmpc&quot;</execute></action>
+      </item>
+    </menu>
+    <menu id='System' label='System'>
+      <menu id='Administration' label='Administration'>
+        <item label='Ceni'>
+          <action name='Execute'><execute>x-terminal-emulator  -T &quot;Ceni&quot; -e sh -c &quot;su-to-root -c /usr/bin/Ceni&quot;</execute></action>
+        </item>
+        <item label='Configure CAPI ISDN'>
+          <action name='Execute'><execute>su-to-root -X -c /usr/sbin/capi-isdnconf</execute></action>
+        </item>
+        <item label='Configure GPRS connection'>
+          <action name='Execute'><execute>su-to-root -X -c /usr/sbin/gprsconnect</execute></action>
+        </item>
+        <item label='Configure NdisWrapper'>
+          <action name='Execute'><execute>su-to-root -X -c /usr/sbin/configure-ndiswrapper</execute></action>
+        </item>
+        <item label='Configure printer(s)'>
+          <action name='Execute'><execute>su-to-root -X -c /usr/sbin/configure-cups</execute></action>
+        </item>
+        <item label='/dev/modem connection setup (serial/USB/IRDA/Bluetooth)'>
+          <action name='Execute'><execute>su-to-root -X -c /usr/sbin/modemlink</execute></action>
+        </item>
+        <item label='DSL/PPPoE configuration tool'>
+          <action name='Execute'><execute>x-terminal-emulator  -T &quot;DSL/PPPoE configuration tool&quot; -e sh -c &quot;/usr/sbin/pppoeconf&quot;</execute></action>
+        </item>
+        <item label='Editres'>
+          <action name='Execute'><execute>editres</execute></action>
+        </item>
+        <item label='fluxconf'>
+          <action name='Execute'><execute>/usr/bin/fluxconf</execute></action>
+        </item>
+        <item label='fluxkeys'>
+          <action name='Execute'><execute>/usr/bin/fluxkeys</execute></action>
+        </item>
+        <item label='fluxmenu'>
+          <action name='Execute'><execute>/usr/bin/fluxmenu</execute></action>
+        </item>
+        <item label='GTK+ 2.0 Theme Switch'>
+          <action name='Execute'><execute>/usr/bin/switch2</execute></action>
+        </item>
+        <item label='KDEPrintFax'>
+          <action name='Execute'><execute>/usr/bin/kdeprintfax</execute></action>
+        </item>
+        <item label='KPager'>
+          <action name='Execute'><execute>/usr/bin/kpager</execute></action>
+        </item>
+        <item label='KPrinter'>
+          <action name='Execute'><execute>/usr/bin/kprinter</execute></action>
+        </item>
+        <item label='metapackage-installer'>
+          <action name='Execute'><execute>su-to-root -X -c /usr/sbin/metapackage-installer</execute></action>
+        </item>
+        <item label='Openbox Configuration Manager'>
+          <action name='Execute'><execute>/usr/bin/obconf</execute></action>
+        </item>
+        <item label='Orphaner (all)'>
+          <action name='Execute'><execute>x-terminal-emulator  -T &quot;Orphaner (all)&quot; -e sh -c &quot;su-to-root -c &apos;/usr/sbin/orphaner -a&apos;&quot;</execute></action>
+        </item>
+        <item label='Orphaner - editkeep'>
+          <action name='Execute'><execute>x-terminal-emulator  -T &quot;Orphaner - editkeep&quot; -e sh -c &quot;su-to-root -c &apos;/usr/sbin/editkeep&apos;&quot;</execute></action>
+        </item>
+        <item label='Orphaner (libs)'>
+          <action name='Execute'><execute>x-terminal-emulator  -T &quot;Orphaner (libs)&quot; -e sh -c &quot;su-to-root -c /usr/sbin/orphaner&quot;</execute></action>
+        </item>
+        <item label='PPPoE Config'>
+          <action name='Execute'><execute>su-to-root -c /usr/sbin/pppoe-config</execute></action>
+        </item>
+        <item label='sidux Control Center'>
+          <action name='Execute'><execute>su-to-root -X -c /usr/bin/siduxcc</execute></action>
+        </item>
+        <item label='Start SSH Server'>
+          <action name='Execute'><execute>x-terminal-emulator  -T &quot;Start SSH Server&quot; -e sh -c &quot;su-to-root -c /usr/sbin/sshstart&quot;</execute></action>
+        </item>
+        <item label='Xclipboard'>
+          <action name='Execute'><execute>xclipboard</execute></action>
+        </item>
+        <item label='Xfontsel'>
+          <action name='Execute'><execute>xfontsel</execute></action>
+        </item>
+        <item label='Xkill'>
+          <action name='Execute'><execute>xkill</execute></action>
+        </item>
+        <item label='Xrefresh'>
+          <action name='Execute'><execute>xrefresh</execute></action>
+        </item>
+      </menu>
+      <menu id='Hardware' label='Hardware'>
+        <item label='KDat'>
+          <action name='Execute'><execute>/usr/bin/kdat</execute></action>
+        </item>
+        <item label='Mountapp'>
+          <action name='Execute'><execute>/usr/bin/mount.app</execute></action>
+        </item>
+        <item label='Xvidtune'>
+          <action name='Execute'><execute>xvidtune</execute></action>
+        </item>
+      </menu>
+      <menu id='Monitoring' label='Monitoring'>
+        <item label='Conky'>
+          <action name='Execute'><execute>x-terminal-emulator  -T &quot;Conky&quot; -e sh -c &quot;/usr/bin/conky&quot;</execute></action>
+        </item>
+        <item label='GKrellM'>
+          <action name='Execute'><execute>/usr/bin/gkrellm</execute></action>
+        </item>
+        <item label='htop'>
+          <action name='Execute'><execute>x-terminal-emulator  -T &quot;htop&quot; -e sh -c &quot;/usr/bin/htop&quot;</execute></action>
+        </item>
+        <item label='KJobViewer'>
+          <action name='Execute'><execute>/usr/bin/kjobviewer --show --all</execute></action>
+        </item>
+        <item label='Pstree'>
+          <action name='Execute'><execute>x-terminal-emulator  -T &quot;Pstree&quot; -e sh -c &quot;/usr/bin/pstree.x11&quot;</execute></action>
+        </item>
+        <item label='Top'>
+          <action name='Execute'><execute>x-terminal-emulator  -T &quot;Top&quot; -e sh -c &quot;/usr/bin/top&quot;</execute></action>
+        </item>
+        <item label='Xconsole'>
+          <action name='Execute'><execute>xconsole -file /dev/xconsole</execute></action>
+        </item>
+        <item label='Xev'>
+          <action name='Execute'><execute>x-terminal-emulator -e xev</execute></action>
+        </item>
+        <item label='Xload'>
+          <action name='Execute'><execute>xload</execute></action>
+        </item>
+      </menu>
+      <item label='Openbox Menu Editor'>
+        <action name='Execute'><execute>/usr/bin/obmenu</execute></action>
+      </item>
+    </menu>
+    <menu id='Terminal Emulators' label='Terminal Emulators'>
+      <item label='Aterm'>
+        <action name='Execute'><execute>/usr/bin/aterm</execute></action>
+      </item>
+      <item label='Rxvt-Unicode'>
+        <action name='Execute'><execute>urxvt</execute></action>
+      </item>
+      <item label='Rxvt-Unicode (Black,Xft)'>
+        <action name='Execute'><execute>urxvt -fn &quot;xft:Courier New&quot; -rv</execute></action>
+      </item>
+      <item label='XTerm'>
+        <action name='Execute'><execute>xterm</execute></action>
+      </item>
+      <item label='X-Terminal as root (GKsu)'>
+        <action name='Execute'><execute>/usr/bin/gksu -u root /usr/bin/x-terminal-emulator</execute></action>
+      </item>
+      <item label='XTerm (Unicode)'>
+        <action name='Execute'><execute>uxterm</execute></action>
+      </item>
+      <item label='yeahconsole'>
+        <action name='Execute'><execute>/usr/bin/yeahconsole</execute></action>
+      </item>
+    </menu>
+    <menu id='Text' label='Text'>
+      <item label='xdialog'>
+        <action name='Execute'><execute>/usr/bin/Xdialog</execute></action>
+      </item>
+    </menu>
+    <menu id='Tools' label='Tools'>
+      <item label='adesklets'>
+        <action name='Execute'><execute>/usr/bin/adesklets</execute></action>
+      </item>
+      <item label='emelFM'>
+        <action name='Execute'><execute>/usr/bin/emelfm</execute></action>
+      </item>
+      <item label='KSync'>
+        <action name='Execute'><execute>/usr/bin/ksync</execute></action>
+      </item>
+      <item label='pypanel'>
+        <action name='Execute'><execute>/usr/bin/pypanel</execute></action>
+      </item>
+    </menu>
+    <menu id='Viewers' label='Viewers'>
+      <item label='Adobe Reader'>
+        <action name='Execute'><execute>/usr/bin/acroread</execute></action>
+      </item>
+      <item label='Gwenview'>
+        <action name='Execute'><execute>/usr/bin/gwenview</execute></action>
+      </item>
+      <item label='kchmviewer'>
+        <action name='Execute'><execute>/usr/bin/kchmviewer</execute></action>
+      </item>
+      <item label='KGhostView'>
+        <action name='Execute'><execute>/usr/bin/kghostview</execute></action>
+      </item>
+      <item label='KPDF'>
+        <action name='Execute'><execute>/usr/bin/kpdf</execute></action>
+      </item>
+      <item label='KTnef'>
+        <action name='Execute'><execute>/usr/bin/ktnef</execute></action>
+      </item>
+      <item label='MPlayer'>
+        <action name='Execute'><execute>/usr/bin/gmplayer</execute></action>
+      </item>
+      <item label='Ogle'>
+        <action name='Execute'><execute>/usr/bin/ogle</execute></action>
+      </item>
+      <item label='Xditview'>
+        <action name='Execute'><execute>xditview</execute></action>
+      </item>
+    </menu>
+  </menu>
+  <menu id='Games' label='Games'>
+    <menu id='Card' label='Card'>
+      <item label='KDE Patience'>
+        <action name='Execute'><execute>/usr/games/kpat</execute></action>
+      </item>
+    </menu>
+    <menu id='Toys' label='Toys'>
+      <item label='idesk'>
+        <action name='Execute'><execute>/usr/bin/idesk</execute></action>
+      </item>
+      <item label='Oclock'>
+        <action name='Execute'><execute>oclock</execute></action>
+      </item>
+      <item label='Xclock (analog)'>
+        <action name='Execute'><execute>xclock -analog</execute></action>
+      </item>
+      <item label='Xclock (digital)'>
+        <action name='Execute'><execute>xclock -digital -update 1</execute></action>
+      </item>
+      <item label='Xeyes'>
+        <action name='Execute'><execute>xeyes</execute></action>
+      </item>
+      <item label='Xlogo'>
+        <action name='Execute'><execute>xlogo</execute></action>
+      </item>
+    </menu>
+  </menu>
+  <menu id='Help' label='Help'>
+    <item label='Info'>
+      <action name='Execute'><execute>x-terminal-emulator  -T &quot;Info&quot; -e sh -c &quot;info&quot;</execute></action>
+    </item>
+    <item label='KDE Help Center'>
+      <action name='Execute'><execute>/usr/bin/khelpcenter</execute></action>
+    </item>
+    <item label='Xman'>
+      <action name='Execute'><execute>xman</execute></action>
+    </item>
+  </menu>
+  <menu id='Screen' label='Screen'>
+    <menu id='Lock' label='Lock'>
+      <menu id='Assorted' label='Assorted'>
+        <item label='Anemone'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode anemone</execute></action>
+        </item>
+        <item label='Ball'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode ball</execute></action>
+        </item>
+        <item label='Blot'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode blot</execute></action>
+        </item>
+        <item label='Bounce'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode bounce</execute></action>
+        </item>
+        <item label='Bubble'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode bubble</execute></action>
+        </item>
+        <item label='Clock'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode clock</execute></action>
+        </item>
+        <item label='Crystal'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode crystal</execute></action>
+        </item>
+        <item label='Daisy'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode daisy</execute></action>
+        </item>
+        <item label='Dclock'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode dclock</execute></action>
+        </item>
+        <item label='Decay'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode decay</execute></action>
+        </item>
+        <item label='Deco'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode deco</execute></action>
+        </item>
+        <item label='Deluxe'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode deluxe</execute></action>
+        </item>
+        <item label='Eyes'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode eyes +trackmouse</execute></action>
+        </item>
+        <item label='Eyesptr'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode eyes -trackmouse</execute></action>
+        </item>
+        <item label='Fiberlamp'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode fiberlamp</execute></action>
+        </item>
+        <item label='Fzort'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode fzort</execute></action>
+        </item>
+        <item label='Goop'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode goop</execute></action>
+        </item>
+        <item label='Juggle'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode juggle</execute></action>
+        </item>
+        <item label='Marquee'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode marquee</execute></action>
+        </item>
+        <item label='Matrix'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode matrix</execute></action>
+        </item>
+        <item label='Munch'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode munch</execute></action>
+        </item>
+        <item label='Nose'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode nose</execute></action>
+        </item>
+        <item label='Pacman'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode pacman</execute></action>
+        </item>
+        <item label='Pyro'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode pyro +use3d</execute></action>
+        </item>
+        <item label='Pyro2'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode pyro2</execute></action>
+        </item>
+        <item label='Pyro3d'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode pyro -use3d</execute></action>
+        </item>
+        <item label='Rain'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode rain</execute></action>
+        </item>
+        <item label='Roll'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode roll</execute></action>
+        </item>
+        <item label='Slip'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode slip</execute></action>
+        </item>
+        <item label='Solitare'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode solitaire +trackmouse</execute></action>
+        </item>
+        <item label='Solitareptr'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode solitaire -trackmouse</execute></action>
+        </item>
+        <item label='Starfish'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode starfish -install</execute></action>
+        </item>
+        <item label='Swarm'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode swarm +trackmouse</execute></action>
+        </item>
+        <item label='Swarmptr'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode swarm -trackmouse</execute></action>
+        </item>
+        <item label='Swirl'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode swirl -install</execute></action>
+        </item>
+        <item label='T3d'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode t3d</execute></action>
+        </item>
+        <item label='Tetris'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode tetris</execute></action>
+        </item>
+        <item label='Tube'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode tube -install</execute></action>
+        </item>
+        <item label='Worm'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode worm +use3d</execute></action>
+        </item>
+        <item label='Worm3d'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode worm -use3d</execute></action>
+        </item>
+        <item label='Xcl'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode xcl</execute></action>
+        </item>
+        <item label='Xjack'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode xjack</execute></action>
+        </item>
+      </menu>
+      <menu id='Automata' label='Automata'>
+        <item label='Ant'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode ant -neighbors 4 +truchet</execute></action>
+        </item>
+        <item label='Ant3d'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode ant3d</execute></action>
+        </item>
+        <item label='Ant Truchet'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode ant -neighbors 4 -truchet</execute></action>
+        </item>
+        <item label='Bee'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode ant -neighbors 6 +truchet</execute></action>
+        </item>
+        <item label='Bee Truchet'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode ant -neighbors 6 -truchet</execute></action>
+        </item>
+        <item label='Bug'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode bug</execute></action>
+        </item>
+        <item label='Demon'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode demon</execute></action>
+        </item>
+        <item label='Dilemma'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode dilemma</execute></action>
+        </item>
+        <item label='Life'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode life</execute></action>
+        </item>
+        <item label='Life1d'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode life1d</execute></action>
+        </item>
+        <item label='Life3d'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode life3d</execute></action>
+        </item>
+        <item label='Life Callahan'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode life -callahan -size 7</execute></action>
+        </item>
+        <item label='Loop'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode loop</execute></action>
+        </item>
+        <item label='Petri'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode petri</execute></action>
+        </item>
+        <item label='Random'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode random -modelist allautomata -fullrandom -neighbors 0</execute></action>
+        </item>
+        <item label='Voters'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode voters</execute></action>
+        </item>
+        <item label='Wator'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode wator</execute></action>
+        </item>
+        <item label='Wire'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode wire</execute></action>
+        </item>
+      </menu>
+      <menu id='Fractal' label='Fractal'>
+        <item label='Coral'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode coral</execute></action>
+        </item>
+        <item label='Discrete'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode discrete</execute></action>
+        </item>
+        <item label='Dragon'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode dragon</execute></action>
+        </item>
+        <item label='Drift'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode drift -fullrandom</execute></action>
+        </item>
+        <item label='Euler2d'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode euler2d</execute></action>
+        </item>
+        <item label='Flame'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode flame</execute></action>
+        </item>
+        <item label='Flow'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode flow</execute></action>
+        </item>
+        <item label='Forest'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode forest</execute></action>
+        </item>
+        <item label='Hop'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode hop -fullrandom</execute></action>
+        </item>
+        <item label='IFS'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode ifs</execute></action>
+        </item>
+        <item label='Julia'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode julia +trackmouse</execute></action>
+        </item>
+        <item label='Juliaptr'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode julia -trackmouse</execute></action>
+        </item>
+        <item label='Kumppa'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode kumppa</execute></action>
+        </item>
+        <item label='Lightning'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode lightning</execute></action>
+        </item>
+        <item label='Lyapunov'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode lyapunov -install</execute></action>
+        </item>
+        <item label='Mandelbrot'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode mandelbrot -install</execute></action>
+        </item>
+        <item label='Mountain'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode mountain</execute></action>
+        </item>
+        <item label='Random'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode random -modelist allfractal -fullrandom</execute></action>
+        </item>
+        <item label='Sierpinski'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode sierpinski</execute></action>
+        </item>
+        <item label='Strange'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode strange</execute></action>
+        </item>
+        <item label='Thornbird'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode thornbird</execute></action>
+        </item>
+        <item label='Triangle'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode triangle</execute></action>
+        </item>
+        <item label='Turtle'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode turtle</execute></action>
+        </item>
+        <item label='Vines'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode vines</execute></action>
+        </item>
+      </menu>
+      <menu id='Geometry' label='Geometry'>
+        <item label='Apollonian'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode apollonian</execute></action>
+        </item>
+        <item label='Braid'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode braid</execute></action>
+        </item>
+        <item label='Fadeplot'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode fadeplot</execute></action>
+        </item>
+        <item label='Helix'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode helix -fullrandom</execute></action>
+        </item>
+        <item label='Hyper'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode hyper</execute></action>
+        </item>
+        <item label='Ico'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode ico</execute></action>
+        </item>
+        <item label='Kaleid'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode kaleid</execute></action>
+        </item>
+        <item label='Laser'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode laser</execute></action>
+        </item>
+        <item label='Lisa'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode lisa</execute></action>
+        </item>
+        <item label='Lissie'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode lissie</execute></action>
+        </item>
+        <item label='Penrose'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode penrose +ammann</execute></action>
+        </item>
+        <item label='Penrose Ammann'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode penrose -ammann</execute></action>
+        </item>
+        <item label='Petal'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode petal</execute></action>
+        </item>
+        <item label='Polyominoes'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode polyominoes</execute></action>
+        </item>
+        <item label='Qix'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode qix +complete</execute></action>
+        </item>
+        <item label='Qix complete'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode qix -complete</execute></action>
+        </item>
+        <item label='Random'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode random -modelist allgeometry -fullrandom</execute></action>
+        </item>
+        <item label='Rotor'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode rotor</execute></action>
+        </item>
+        <item label='Shape'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode shape</execute></action>
+        </item>
+        <item label='Sphere'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode sphere</execute></action>
+        </item>
+        <item label='Spiral'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode spiral</execute></action>
+        </item>
+        <item label='Spline'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode spline</execute></action>
+        </item>
+        <item label='Tik_Tak'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode tik_tak</execute></action>
+        </item>
+        <item label='Toneclock'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode toneclock</execute></action>
+        </item>
+      </menu>
+      <menu id='MarqueeMessage' label='MarqueeMessage'>
+        <item label='Back Soon'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode marquee -message &quot;$LOGNAME will be back soon.&quot;</execute></action>
+        </item>
+        <item label='Overnight'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode marquee -message &quot;$LOGNAME will be back in the morning.&quot;</execute></action>
+        </item>
+        <item label='Rude'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode marquee -message &quot;$LOGNAME not here, please go away!&quot;</execute></action>
+        </item>
+      </menu>
+      <menu id='NoseMessage' label='NoseMessage'>
+        <item label='Back Soon'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode nose -message &quot;$LOGNAME will be back soon.&quot;</execute></action>
+        </item>
+        <item label='Overnight'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode nose -message &quot;$LOGNAME will be back in the morning.&quot;</execute></action>
+        </item>
+        <item label='Rude'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode nose -message &quot;$LOGNAME not here, please go away!&quot;</execute></action>
+        </item>
+      </menu>
+      <menu id='Space' label='Space'>
+        <item label='Bouboule'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode bouboule +use3d</execute></action>
+        </item>
+        <item label='Bouboule3d'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode bouboule -use3d</execute></action>
+        </item>
+        <item label='Galaxy'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode galaxy</execute></action>
+        </item>
+        <item label='Grav'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode grav +trail +decay</execute></action>
+        </item>
+        <item label='Grav Decay'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode grav -decay</execute></action>
+        </item>
+        <item label='Grav Trail'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode grav -trail</execute></action>
+        </item>
+        <item label='Random Space'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode random -modelist allspace</execute></action>
+        </item>
+        <item label='Rock'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode star -rock</execute></action>
+        </item>
+        <item label='Space'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode space</execute></action>
+        </item>
+        <item label='Star'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode star +rock +use3d +trek 0</execute></action>
+        </item>
+        <item label='Star3d'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode star -use3d</execute></action>
+        </item>
+        <item label='Star Trek'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode star -trek 100</execute></action>
+        </item>
+        <item label='World'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode world</execute></action>
+        </item>
+      </menu>
+      <menu id='Special' label='Special'>
+        <item label='Blank'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode blank</execute></action>
+        </item>
+        <item label='Bomb'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode bomb</execute></action>
+        </item>
+        <item label='Random 3d'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode random -modelist all3d -use3d -fullrandom</execute></action>
+        </item>
+        <item label='Random all'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode random -modelist all -fullrandom -neighbors 0</execute></action>
+        </item>
+        <item label='Random nice'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode random -modelist allnice -fullrandom -neighbors 0</execute></action>
+        </item>
+        <item label='Random ptr'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode random -modelist allmouse -trackmouse -fullrandom</execute></action>
+        </item>
+        <item label='Random standard'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode random -modelist all-allgl -fullrandom -neighbors 0</execute></action>
+        </item>
+        <item label='Random write'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode random -modelist allwrite -install -fullrandom</execute></action>
+        </item>
+        <item label='Transparent'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode blank -geometry 1x1 -enablesaver</execute></action>
+        </item>
+      </menu>
+      <menu id='XjackMessage' label='XjackMessage'>
+        <item label='Crazy Boy'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode xjack -message &quot;All work and no play makes $LOGNAME a dull boy.&quot;</execute></action>
+        </item>
+        <item label='Crazy Girl'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode xjack -message &quot;All work and no play makes $LOGNAME a dull girl.&quot;</execute></action>
+        </item>
+      </menu>
+      <menu id='XPM' label='XPM'>
+        <item label='Bat'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode bat</execute></action>
+        </item>
+        <item label='Flag'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode flag</execute></action>
+        </item>
+        <item label='Image'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode image</execute></action>
+        </item>
+        <item label='Life'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode life</execute></action>
+        </item>
+        <item label='Life1d'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode life1d</execute></action>
+        </item>
+        <item label='Maze'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode maze</execute></action>
+        </item>
+        <item label='Puzzle'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode puzzle</execute></action>
+        </item>
+        <item label='Random'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -mode random -modelist allxpm -fullrandom</execute></action>
+        </item>
+      </menu>
+    </menu>
+    <menu id='Locking' label='Locking'>
+      <item label='Lock Screen (XScreenSaver)'>
+        <action name='Execute'><execute>/usr/bin/xscreensaver-command -lock</execute></action>
+      </item>
+    </menu>
+    <menu id='Save' label='Save'>
+      <menu id='Assorted' label='Assorted'>
+        <item label='Anemone'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode anemone</execute></action>
+        </item>
+        <item label='Ball'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode ball</execute></action>
+        </item>
+        <item label='Blot'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode blot</execute></action>
+        </item>
+        <item label='Bounce'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode bounce</execute></action>
+        </item>
+        <item label='Bubble'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode bubble</execute></action>
+        </item>
+        <item label='Clock'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode clock</execute></action>
+        </item>
+        <item label='Crystal'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode crystal</execute></action>
+        </item>
+        <item label='Daisy'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode daisy</execute></action>
+        </item>
+        <item label='Dclock'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode dclock</execute></action>
+        </item>
+        <item label='Decay'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode decay</execute></action>
+        </item>
+        <item label='Deco'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode deco</execute></action>
+        </item>
+        <item label='Deluxe'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode deluxe</execute></action>
+        </item>
+        <item label='Eyes'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode eyes +trackmouse</execute></action>
+        </item>
+        <item label='Eyesptr'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode eyes -trackmouse</execute></action>
+        </item>
+        <item label='Fiberlamp'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode fiberlamp</execute></action>
+        </item>
+        <item label='Fzort'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode fzort</execute></action>
+        </item>
+        <item label='Goop'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode goop</execute></action>
+        </item>
+        <item label='Juggle'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode juggle</execute></action>
+        </item>
+        <item label='Marquee'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode marquee</execute></action>
+        </item>
+        <item label='Matrix'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode matrix</execute></action>
+        </item>
+        <item label='Munch'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode munch</execute></action>
+        </item>
+        <item label='Nose'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode nose</execute></action>
+        </item>
+        <item label='Pacman'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode pacman</execute></action>
+        </item>
+        <item label='Pyro'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode pyro +use3d</execute></action>
+        </item>
+        <item label='Pyro2'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode pyro2</execute></action>
+        </item>
+        <item label='Pyro3d'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode pyro -use3d</execute></action>
+        </item>
+        <item label='Rain'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode rain</execute></action>
+        </item>
+        <item label='Roll'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode roll</execute></action>
+        </item>
+        <item label='Slip'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode slip</execute></action>
+        </item>
+        <item label='Solitare'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode solitaire +trackmouse</execute></action>
+        </item>
+        <item label='Solitareptr'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode solitaire -trackmouse</execute></action>
+        </item>
+        <item label='Starfish'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode starfish -install</execute></action>
+        </item>
+        <item label='Swarm'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode swarm +trackmouse</execute></action>
+        </item>
+        <item label='Swarmptr'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode swarm -trackmouse</execute></action>
+        </item>
+        <item label='Swirl'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode swirl -install</execute></action>
+        </item>
+        <item label='T3d'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode t3d</execute></action>
+        </item>
+        <item label='Tetris'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode tetris</execute></action>
+        </item>
+        <item label='Tube'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode tube -install</execute></action>
+        </item>
+        <item label='Worm'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode worm +use3d</execute></action>
+        </item>
+        <item label='Worm3d'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode worm -use3d</execute></action>
+        </item>
+        <item label='Xcl'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode xcl</execute></action>
+        </item>
+        <item label='Xjack'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode xjack</execute></action>
+        </item>
+      </menu>
+      <menu id='Automata' label='Automata'>
+        <item label='Ant'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode ant -neighbors 4 +truchet</execute></action>
+        </item>
+        <item label='Ant3d'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode ant3d</execute></action>
+        </item>
+        <item label='Ant Truchet'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode ant -neighbors 4 -truchet</execute></action>
+        </item>
+        <item label='Bee'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode ant -neighbors 6 +truchet</execute></action>
+        </item>
+        <item label='Bee Truchet'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode ant -neighbors 6 -truchet</execute></action>
+        </item>
+        <item label='Bug'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode bug</execute></action>
+        </item>
+        <item label='Demon'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode demon</execute></action>
+        </item>
+        <item label='Dilemma'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode dilemma</execute></action>
+        </item>
+        <item label='Life'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode life</execute></action>
+        </item>
+        <item label='Life1d'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode life1d</execute></action>
+        </item>
+        <item label='Life3d'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode life3d</execute></action>
+        </item>
+        <item label='Life Callahan'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode life -callahan -size 7</execute></action>
+        </item>
+        <item label='Loop'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode loop</execute></action>
+        </item>
+        <item label='Petri'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode petri</execute></action>
+        </item>
+        <item label='Random'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist allautomata -fullrandom -neighbors 0</execute></action>
+        </item>
+        <item label='Voters'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode voters</execute></action>
+        </item>
+        <item label='Wator'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode wator</execute></action>
+        </item>
+        <item label='Wire'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode wire</execute></action>
+        </item>
+      </menu>
+      <menu id='Fractal' label='Fractal'>
+        <item label='Coral'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode coral</execute></action>
+        </item>
+        <item label='Discrete'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode discrete</execute></action>
+        </item>
+        <item label='Dragon'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode dragon</execute></action>
+        </item>
+        <item label='Drift'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode drift -fullrandom</execute></action>
+        </item>
+        <item label='Euler2d'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode euler2d</execute></action>
+        </item>
+        <item label='Flame'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode flame</execute></action>
+        </item>
+        <item label='Flow'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode flow</execute></action>
+        </item>
+        <item label='Forest'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode forest</execute></action>
+        </item>
+        <item label='Hop'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode hop -fullrandom</execute></action>
+        </item>
+        <item label='IFS'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode ifs</execute></action>
+        </item>
+        <item label='Julia'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode julia +trackmouse</execute></action>
+        </item>
+        <item label='Juliaptr'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode julia -trackmouse</execute></action>
+        </item>
+        <item label='Kumppa'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode kumppa</execute></action>
+        </item>
+        <item label='Lightning'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode lightning</execute></action>
+        </item>
+        <item label='Lyapunov'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode lyapunov -install</execute></action>
+        </item>
+        <item label='Mandelbrot'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode mandelbrot -install</execute></action>
+        </item>
+        <item label='Mountain'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode mountain</execute></action>
+        </item>
+        <item label='Random'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist allfractal -fullrandom</execute></action>
+        </item>
+        <item label='Sierpinski'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode sierpinski</execute></action>
+        </item>
+        <item label='Strange'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode strange</execute></action>
+        </item>
+        <item label='Thornbird'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode thornbird</execute></action>
+        </item>
+        <item label='Triangle'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode triangle</execute></action>
+        </item>
+        <item label='Turtle'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode turtle</execute></action>
+        </item>
+        <item label='Vines'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode vines</execute></action>
+        </item>
+      </menu>
+      <menu id='Geometry' label='Geometry'>
+        <item label='Apollonian'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode apollonian</execute></action>
+        </item>
+        <item label='Braid'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode braid</execute></action>
+        </item>
+        <item label='Fadeplot'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode fadeplot</execute></action>
+        </item>
+        <item label='Helix'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode helix -fullrandom</execute></action>
+        </item>
+        <item label='Hyper'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode hyper</execute></action>
+        </item>
+        <item label='Ico'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode ico</execute></action>
+        </item>
+        <item label='Kaleid'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode kaleid</execute></action>
+        </item>
+        <item label='Laser'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode laser</execute></action>
+        </item>
+        <item label='Lisa'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode lisa</execute></action>
+        </item>
+        <item label='Lissie'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode lissie</execute></action>
+        </item>
+        <item label='Penrose'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode penrose +ammann</execute></action>
+        </item>
+        <item label='Penrose Ammann'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode penrose -ammann</execute></action>
+        </item>
+        <item label='Petal'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode petal</execute></action>
+        </item>
+        <item label='Polyominoes'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode polyominoes</execute></action>
+        </item>
+        <item label='Qix'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode qix +complete</execute></action>
+        </item>
+        <item label='Qix complete'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode qix -complete</execute></action>
+        </item>
+        <item label='Random'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist allgeometry</execute></action>
+        </item>
+        <item label='Rotor'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode rotor</execute></action>
+        </item>
+        <item label='Shape'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode shape</execute></action>
+        </item>
+        <item label='Sphere'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode sphere</execute></action>
+        </item>
+        <item label='Spiral'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode spiral</execute></action>
+        </item>
+        <item label='Spline'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode spline</execute></action>
+        </item>
+        <item label='Tik_Tak'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode tik_tak</execute></action>
+        </item>
+        <item label='Toneclock'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode toneclock</execute></action>
+        </item>
+      </menu>
+      <menu id='MarqueeMessage' label='MarqueeMessage'>
+        <item label='Available'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode marquee -message &quot;Hey, I&apos;m available now!&quot;</execute></action>
+        </item>
+        <item label='Brilliant!'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode marquee -message &quot;WOW! $LOGNAME, You&apos;re Brilliant!&quot;</execute></action>
+        </item>
+        <item label='Love You'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode marquee -message &quot;You know, I Love You $LOGNAME.&quot;</execute></action>
+        </item>
+      </menu>
+      <menu id='NoseMessage' label='NoseMessage'>
+        <item label='Available'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode nose -message &quot;Hey, I&apos;m available now!&quot;</execute></action>
+        </item>
+        <item label='Brilliant!'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode nose -message &quot;WOW! $LOGNAME, You&apos;re Brilliant!&quot;</execute></action>
+        </item>
+        <item label='Love You'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode nose -message &quot;You know, I Love You $LOGNAME.&quot;</execute></action>
+        </item>
+      </menu>
+      <menu id='Space' label='Space'>
+        <item label='Bouboule'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode bouboule +use3d</execute></action>
+        </item>
+        <item label='Bouboule3d'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode bouboule -use3d</execute></action>
+        </item>
+        <item label='Galaxy'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode galaxy</execute></action>
+        </item>
+        <item label='Grav'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode grav +trail +decay</execute></action>
+        </item>
+        <item label='Grav Decay'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode grav -decay</execute></action>
+        </item>
+        <item label='Grav Trail'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode grav -trail</execute></action>
+        </item>
+        <item label='Random Space'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist allspace</execute></action>
+        </item>
+        <item label='Rock'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode star -rock</execute></action>
+        </item>
+        <item label='Scooter'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode scooter</execute></action>
+        </item>
+        <item label='Space'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode space</execute></action>
+        </item>
+        <item label='Star'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode star +rock +use3d +trek 0</execute></action>
+        </item>
+        <item label='Star3d'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode star -use3d</execute></action>
+        </item>
+        <item label='Star Trek'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode star -trek 100</execute></action>
+        </item>
+        <item label='World'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode world</execute></action>
+        </item>
+      </menu>
+      <menu id='Special' label='Special'>
+        <item label='Blank'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode blank</execute></action>
+        </item>
+        <item label='Bomb'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode bomb</execute></action>
+        </item>
+        <item label='Random 3d'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist all3d -use3d -fullrandom</execute></action>
+        </item>
+        <item label='Random all'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist all -fullrandom -neighbors 0</execute></action>
+        </item>
+        <item label='Random nice'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist allnice -fullrandom -neighbors 0</execute></action>
+        </item>
+        <item label='Random ptr'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist allmouse -trackmouse -fullrandom</execute></action>
+        </item>
+        <item label='Random standard'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist all-allgl -fullrandom -neighbors 0</execute></action>
+        </item>
+        <item label='Random write'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist allwrite -fullrandom</execute></action>
+        </item>
+      </menu>
+      <menu id='XPM' label='XPM'>
+        <item label='Bat'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode bat</execute></action>
+        </item>
+        <item label='Flag'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode flag</execute></action>
+        </item>
+        <item label='Image'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode image</execute></action>
+        </item>
+        <item label='Life'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode life</execute></action>
+        </item>
+        <item label='Life1d'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode life1d</execute></action>
+        </item>
+        <item label='Maze'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode maze</execute></action>
+        </item>
+        <item label='Puzzle'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode puzzle</execute></action>
+        </item>
+        <item label='Random'>
+          <action name='Execute'><execute>/usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist allxpm -fullrandom</execute></action>
+        </item>
+      </menu>
+    </menu>
+    <menu id='Saving' label='Saving'>
+      <item label='Activate ScreenSaver (Next)'>
+        <action name='Execute'><execute>/usr/bin/xscreensaver-command -next</execute></action>
+      </item>
+      <item label='Activate ScreenSaver (Previous)'>
+        <action name='Execute'><execute>/usr/bin/xscreensaver-command -prev</execute></action>
+      </item>
+      <item label='Activate ScreenSaver (Random)'>
+        <action name='Execute'><execute>/usr/bin/xscreensaver-command -activate</execute></action>
+      </item>
+      <item label='Demo Screen Hacks'>
+        <action name='Execute'><execute>/usr/bin/xscreensaver-command -demo</execute></action>
+      </item>
+      <item label='Disable XScreenSaver'>
+        <action name='Execute'><execute>/usr/bin/xscreensaver-command -exit</execute></action>
+      </item>
+      <item label='Enable XScreenSaver'>
+        <action name='Execute'><execute>/usr/bin/xscreensaver</execute></action>
+      </item>
+      <item label='Reinitialize XScreenSaver'>
+        <action name='Execute'><execute>/usr/bin/xscreensaver-command -restart</execute></action>
+      </item>
+      <item label='ScreenSaver Preferences'>
+        <action name='Execute'><execute>/usr/bin/xscreensaver-command -prefs</execute></action>
+      </item>
+    </menu>
+  </menu>
+  <menu id='Window Managers' label='Window Managers'>
+    <item label='FluxBox'>
+      <action name='Restart'><execute>/usr/bin/startfluxbox</execute></action>
+    </item>
+    <item label='Openbox'>
+      <action name='Restart'><execute>/usr/bin/openbox</execute></action>
+    </item>
+  </menu>
+</menu>
+
+</openbox_menu>

@@ -1,0 +1,95 @@
+# a sample config file for visibility.
+# this file goes in ~/.config/visibility/config
+# it can be used to set a theme and override specific options.
+
+# uncomment this option to use the theme 'magicaltheme'
+# themes are stored in ~/.themes/theme_name/visibility/theme
+# theme syntax is identical to the syntax of this config file.
+# (yes, a theme could 'inherit' from another theme by specifying a theme!)
+
+#theme magicaltheme
+
+orientation bottom_left    # set this to the corner of the desktop that you
+                            # would like visibility to be placed. valid options:
+                            # top_left, top_right, bottom_left, bottom_right
+                            
+gap_x 5                     # the amount of space to leave between the pager and
+                            # the side of the desktop.
+                            
+gap_y 3                    # the amount of space to leave between the pager and
+                            # the top or bottom of the desktop.
+
+image_size 12               # the pixel size of an icon; icons are square.
+
+spacing 5                   # the amount of space to leave between icons as well
+                            # as between the edge of the window and the icons.
+
+border_width 1              # the width of the border around the window. can be 
+                            # set to 0 if your window manager (like openbox!) 
+                            # can provide its own borders for borderless
+                            # windows.
+
+desktop_separation 10        # the amount of space to leave between desktops.
+
+show_desktop_names true     # whether or not to show desktop names. these names
+                            # are specified by your window manager. valid
+                            # options are 'true' and 'false'.
+
+single_desktop_mode true    # whether or not to show only windows from the
+                            # current desktop.
+
+bg_colour 3C4746            # the background colour
+
+border_colour 758C8A       # the border colour
+
+active_text_colour DCD5C0   # the colour of the name of the active desktop.
+
+inactive_text_colour 758C8A # the colour of the name an inactive desktop.
+
+font AvantGarde LT Medium-7                     # the name of the font to use. this is an xft name,
+                            # so one could use 'verdana:pixelsize=10' or
+                            # 'verdana-10'.
+                            
+inactive_bg_colour 3C4746   # the background colour of inactive desktops.
+
+active_bg_colour 3C4746     # the background colour of active desktops.
+                            # if you hate this setting, set it to the same as
+                            # bg_colour and inactive_bg_colour, and you will
+                            # probably be a happy camper.
+
+set_partial_strut true     # whether or not to reserve space on the desktop
+                            # edge. this is useful if you do not want windows
+                            # to maximize over visibility.
+
+set_window_type true        # if true, visibility sets itself to be of 'dock'
+                            # type, which is meant for panels. this is useful if
+                            # you want it to be 'always on top', and other
+                            # panel-like things.
+
+tooltip_padding 3           # the amount of padding to have inside tooltips.
+
+tooltip_time 0.5            # the number of seconds before a tooltip shows up.
+
+tooltip_bg_colour  3C4746    # the tooltip background colour.
+
+tooltip_border_colour 758C8A # the tooltip border colour.
+
+tooltip_text_colour 758C8A   # the colour of text in tooltips
+
+tooltip_font AvantGarde LT Medium-7             # the font to use in tooltips
+
+text_spacing 3              # the amount of spacing to leave between the
+                            # desktop name and first icon.
+
+active_tint 000000          # the colour to tint the active window with
+
+active_tint_amount 0        # the amount to tint the active window (0..1)
+
+inactive_tint 3C4746        # the colour to tint inactive windows with
+
+inactive_tint_amount 0    # the amount to tint active windows (0..1)
+
+iconified_tint 0            # the colour to tint iconified (and 'hidden')
+                            # windows with
+
+iconified_tint_amount 0.2  # the amount to tint iconified windows (0..1)

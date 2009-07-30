@@ -1,0 +1,40 @@
+# This is an automatically generated file.
+# Please see <file:/usr/share/doc/menu/README> for information.
+
+# to use your own menu, copy this to ~/.fluxbox/menu, then edit
+# ~/.fluxbox/init and change the session.menuFile path to ~/.fluxbox/menu
+
+[begin] (Fluxbox)
+
+# Automatically generated file. Do not edit (see /usr/share/doc/menu/html/index.html)
+
+   [submenu] (Flux Menu) 
+    [exec] (Regenerate) {update-menus}
+    [include] (~/.fluxbox/fluxbox-menu)
+   [end]
+   [separator]
+   [exec] (XTerm) {xterm} <~/.fluxbox/icons/menu/sidux-terminal.png>
+   [exec] (root-XTerm) {xterm -e su -} <~/.fluxbox/icons/menu/sidux-terminal.png>
+   [exec] (URxvt) {urxvt} <~/.fluxbox/icons/menu/urxvt.xpm>
+   [exec] (Iceweasel) {iceweasel} <~/.fluxbox/icons/menu/iceweasel.png>
+   [exec] (Eclipse) {/home/hardik/bin/startEclipse.sh} <~/.fluxbox/icons/menu/eclipse.png>
+   [exec] (Kopete) {kopete} <~/.fluxbox/icons/menu/kopete.png>
+   [exec] (Konversation) {konversation} <~/.fluxbox/icons/menu/konversation.png>
+   [exec] (MPlayer) {gmplayer} <~/.fluxbox/icons/menu/mplayer.png>
+   [exec] (Audacious) {audacious} <~/.fluxbox/icons/menu/audacious.png>
+   [separator]
+   [submenu] (System Styles) {Choose a style...}
+      [stylesdir] (/usr/share/fluxbox/styles)
+   [end]
+   [submenu] (User Styles) {Choose a style...}
+      [stylesdir] (~/.fluxbox/styles)
+   [end]
+   [separator]
+   [reconfig] (Reconfigure)
+   [restart] (Restart)
+   [separator]
+   [exec] (Lock) {xscreensaver-command -lock} <~/.fluxbox/icons/menu/lock.png>
+   [exit] (Exit to login) <~/.fluxbox/icons/menu/application-exit.png>
+   [exec] (Reboot) {sudo /sbin/shutdown -r now} <~/.fluxbox/icons/menu/system-restart.png>
+   [exec] (Shutdown) {sudo /sbin/shutdown -h now}  <~/.fluxbox/icons/menu/system-shutdown.png>
+[end]

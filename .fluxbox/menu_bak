@@ -1,0 +1,228 @@
+# This is an automatically generated file.
+# Please see <file:/usr/share/doc/menu/README> for information.
+
+# to use your own menu, copy this to ~/.fluxbox/menu, then edit
+# ~/.fluxbox/init and change the session.menuFile path to ~/.fluxbox/menu
+
+[begin] (Fluxbox)
+
+# Automatically generated file. Do not edit (see /usr/share/doc/menu/html/index.html)
+
+   [submenu] (Apps) {}
+      [submenu] (Databases) {}
+         [exec] (HSQLDB Database Manager) {/usr/bin/hsqldb-databasemanager} </usr/share/pixmaps/hsqldb.xpm>
+         [exec] (HSQLDB Database Manager (Swing\)) {/usr/bin/hsqldb-databasemanagerswing} </usr/share/pixmaps/hsqldb.xpm>
+         [exec] (HSQLDB Query Tool) {/usr/bin/hsqldb-querytool} </usr/share/pixmaps/hsqldb.xpm>
+         [exec] (HSQLDB Transfer Tool) {/usr/bin/hsqldb-transfer} </usr/share/pixmaps/hsqldb.xpm>
+      [end]
+      [submenu] (Editors) {}
+         [exec] (Kate) {/usr/bin/kate} <>
+         [exec] (KEdit) {/usr/bin/kedit} <>
+         [exec] (KWrite) {/usr/bin/kwrite} <>
+      [end]
+      [submenu] (Graphics) {}
+         [exec] (Inkscape) {/usr/bin/inkscape} </usr/share/pixmaps/inkscape.xpm>
+         [exec] (KFax) {/usr/bin/kfax} <>
+         [exec] (KFaxView) {/usr/bin/kfaxview} <>
+         [exec] (KIconEdit) {/usr/bin/kiconedit} <>
+         [exec] (KPDF) {/usr/bin/kpdf} <>
+         [exec] (KSnapshot) {/usr/bin/ksnapshot} <>
+         [exec] (xcam) {/usr/bin/xcam} </usr/share/sane/xscanimage-icon-32x32-2.xpm>
+         [exec] (xscanimage) {/usr/bin/xscanimage} </usr/share/sane/xscanimage-icon-32x32-2.xpm>
+      [end]
+      [submenu] (Math) {}
+         [exec] (KCalc) {/usr/bin/kcalc} <>
+      [end]
+      [submenu] (Net) {}
+         [exec] (aKregator) {/usr/bin/akregator} <>
+         [exec] (EGroupware Setup Wizard) {/usr/bin/egroupwarewizard} <>
+         [exec] (ELinks) { x-terminal-emulator -T "ELinks" -e /usr/bin/elinks} <>
+         [exec] (Iceweasel) {iceweasel} </usr/share/pixmaps/iceweasel.xpm>
+         [exec] (KDE Groupware Wizard) {/usr/bin/groupwarewizard} <>
+         [exec] (KDict) {/usr/bin/kdict} <>
+         [exec] (KGet) {/usr/bin/kget} <>
+         [exec] (Kleopatra) {/usr/bin/kleopatra} <>
+         [exec] (KMail) {/usr/bin/kmail} <>
+         [exec] (KMail/KAB Import Tool) {/usr/bin/kmailcvt} <>
+         [exec] (KNewsTicker) {/usr/bin/appletproxy knewsticker.desktop} <>
+         [exec] (KNode) {/usr/bin/knode} <>
+         [exec] (KOLab Setup Wizard) {/usr/bin/kolabwizard} <>
+         [exec] (Konqueror) {/usr/bin/konqueror --profile webbrowsing} <>
+         [exec] (Konversation IRC Client) {/usr/bin/konversation} </usr/share/pixmaps/konversation32x32.xpm>
+         [exec] (Kopete) {/usr/bin/kopete} <>
+         [exec] (KOrn) {/usr/bin/korn} <>
+         [exec] (KPPP) {/usr/bin/kppp} <>
+         [exec] (KPPP - Logview) {/usr/bin/kppplogview} <>
+         [exec] (Krdc) {/usr/bin/krdc} <>
+         [exec] (Krfb) {/usr/bin/krfb} <>
+         [exec] (KSirc) {/usr/bin/ksirc} <>
+         [exec] (kvpnc) {su-to-root -X -c kvpnc} <>
+         [exec] (KWifiManager) {/usr/bin/kwifimanager} <>
+         [exec] (MS Exchange Setup Wizard) {/usr/bin/exchangewizard} <>
+         [exec] (Novell GroupWise Setup Wizard) {/usr/bin/groupwisewizard} <>
+         [exec] (Openexchange Setup Wizard) {/usr/bin/sloxwizard} <>
+         [exec] (Sun Java 5.0 Web Start) {/usr/lib/jvm/java-1.5.0-sun-1.5.0.11/bin/javaws} </usr/share/icons/sun-java5.xpm>
+         [exec] (Sun Java 6 Web Start) {/usr/lib/jvm/java-6-sun-1.6.0.00/bin/javaws -viewer} </usr/share/icons/sun-java6.xpm>
+      [end]
+      [submenu] (Programming) {}
+         [exec] (BeanShell (text\)) { x-terminal-emulator -T "BeanShell (text)" -e /usr/bin/bsh} <>
+         [exec] (BeanShell (windowed\)) {/usr/bin/xbsh} <>
+         [exec] (Python (v2.4\)) { x-terminal-emulator -T "Python (v2.4)" -e /usr/bin/python2.4} </usr/share/pixmaps/python2.4.xpm>
+         [exec] (Tclsh8.4) { x-terminal-emulator -T "Tclsh8.4" -e /usr/bin/tclsh8.4} <>
+         [exec] (TkWish8.4) {x-terminal-emulator -e /usr/bin/wish8.4} <>
+      [end]
+      [submenu] (Shells) {}
+         [exec] (Bash) { x-terminal-emulator -T "Bash" -e /bin/bash --login} <>
+         [exec] (Dash) { x-terminal-emulator -T "Dash" -e /bin/dash -i} <>
+         [exec] (Sh) { x-terminal-emulator -T "Sh" -e /bin/sh --login} <>
+      [end]
+      [submenu] (Sound) {}
+         [exec] (aRts Builder) {/usr/bin/artsbuilder} </usr/share/pixmaps/artsbuilder.xpm>
+         [exec] (aRts Control) {/usr/bin/artscontrol} </usr/share/pixmaps/artscontrol.xpm>
+         [exec] (Audacious) {/usr/bin/audacious} </usr/share/pixmaps/audacious.xpm>
+         [exec] (KMix) {/usr/bin/kmix} <>
+      [end]
+      [submenu] (System) {}
+         [submenu] (Admin) {}
+            [exec] (alsaconf) { x-terminal-emulator -T "alsaconf" -e su-to-root -p root -c /usr/sbin/alsaconf} <>
+         [end]
+         [exec] (DSL/PPPoE configuration tool) { x-terminal-emulator -T "DSL/PPPoE configuration tool" -e /usr/sbin/pppoeconf} </usr/share/pixmaps/pppoeconf.xpm>
+         [exec] (FSView) {/usr/bin/fsview} </usr/share/pixmaps/fsview.xpm>
+         [exec] (htop) { x-terminal-emulator -T "htop" -e /usr/bin/htop} <>
+         [exec] (ISDN Monitor) { x-terminal-emulator -T "ISDN Monitor" -e /usr/bin/imon} <>
+         [exec] (kAppfinder) {/usr/bin/kappfinder} <>
+         [exec] (KControl) {/usr/bin/kcontrol} <>
+         [exec] (KDat) {/usr/bin/kdat} <>
+         [exec] (KDCOP) {/usr/bin/kdcop} <>
+         [exec] (KDebugDialog) {/usr/bin/kdebugdialog} <>
+         [exec] (kdepasswd) {/usr/bin/kdepasswd} <>
+         [exec] (KDEPrintFax) {/usr/bin/kdeprintfax} <>
+         [exec] (KDE System Guard) {/usr/bin/ksysguard} <>
+         [exec] (KDE System Guard - Process Table) {/usr/bin/kpm} <>
+         [exec] (KDE SysV-Init Editor) {/usr/bin/ksysv} <>
+         [exec] (KDE Task Scheduler) {/usr/bin/kcron} <>
+         [exec] (KDE User Manager) {/usr/bin/kuser} <>
+         [exec] (KDiskFree) {/usr/bin/kdf} <>
+         [exec] (KEditBookmarks) {/usr/bin/keditbookmarks} <>
+         [exec] (KFind) {/usr/bin/kfind} <>
+         [exec] (KFloppy) {/usr/bin/kfloppy} <>
+         [exec] (Kicker) {/usr/bin/kicker} </usr/share/pixmaps/kicker.xpm>
+         [exec] (KInfoCenter) {/usr/bin/kinfocenter} <>
+         [exec] (KJobViewer) {/usr/bin/kjobviewer --show --all} <>
+         [exec] (KMenuEdit) {/usr/bin/kmenuedit} <>
+         [exec] (Konqueror) {/usr/bin/konqueror --profile filemanagement} <>
+         [exec] (KPersonalizer) {/usr/bin/kpersonalizer} <>
+         [exec] (KPowersave) {/usr/bin/kpowersave} </usr/share/pixmaps/kpowersave.xpm>
+         [exec] (KPrinter) {/usr/bin/kprinter} <>
+         [exec] (kwikdisk) {/usr/bin/kwikdisk} <>
+         [exec] (Pstree) { x-terminal-emulator -T "Pstree" -e /usr/bin/pstree.x11} </usr/share/pixmaps/pstree16.xpm>
+         [exec] (Sun Java 5.0 Plugin Control Panel) {/usr/lib/jvm/java-1.5.0-sun-1.5.0.11/bin/ControlPanel} </usr/share/icons/sun-java5.xpm>
+         [exec] (Sun Java 5.0 Policy Tool) {/usr/lib/jvm/java-1.5.0-sun-1.5.0.11/bin/policytool} </usr/share/icons/sun-java5.xpm>
+         [exec] (Sun Java 6 Plugin Control Panel) {/usr/lib/jvm/java-6-sun-1.6.0.00/bin/ControlPanel} </usr/share/icons/sun-java6.xpm>
+         [exec] (Sun Java 6 Policy Tool) {/usr/lib/jvm/java-6-sun-1.6.0.00/bin/policytool} </usr/share/icons/sun-java6.xpm>
+         [exec] (Synaptic Package Manager) {/usr/bin/su-to-root -X -c /usr/sbin/synaptic} </usr/share/synaptic/pixmaps/synaptic_32x32.xpm>
+         [exec] (Top) { x-terminal-emulator -T "Top" -e /usr/bin/top} <>
+         [exec] (X-Terminal as root (GKsu\)) {/usr/bin/gksu -u root /usr/bin/x-terminal-emulator} </usr/share/pixmaps/gksu-debian.xpm>
+      [end]
+      [submenu] (Text) {}
+         [exec] (xdialog) {/usr/bin/Xdialog} <>
+      [end]
+      [submenu] (Tools) {}
+         [exec] (Ark) {/usr/bin/ark} <>
+         [exec] (fluxconf) {/usr/bin/fluxconf} <>
+         [exec] (fluxkeys) {/usr/bin/fluxkeys} <>
+         [exec] (fluxmenu) {/usr/bin/fluxmenu} <>
+         [exec] (k3b) {/usr/bin/k3b} </usr/share/pixmaps/k3b.xpm>
+         [exec] (KAddressbook) {/usr/bin/kaddressbook} <>
+         [exec] (KAlarm) {/usr/bin/kalarm} <>
+         [exec] (Kandy) {/usr/bin/kandy} <>
+         [exec] (KArm) {/usr/bin/karm} <>
+         [exec] (KCharSelect) {/usr/bin/kcharselect} <>
+         [exec] (Kgpg) {/usr/bin/kgpg} <>
+         [exec] (KHexEdit) {/usr/bin/khexedit} <>
+         [exec] (KitchenSync) {/usr/bin/kitchensync} <>
+         [exec] (KJots) {/usr/bin/kjots} <>
+         [exec] (Klipper) {/usr/bin/klipper} <>
+         [exec] (KMag) {/usr/bin/kmag} <>
+         [exec] (KMousetool) {/usr/bin/kmousetool} <>
+         [exec] (KMouth) {/usr/bin/kmouth} <>
+         [exec] (KNotes) {/usr/bin/knotes} <>
+         [exec] (Kontact) {/usr/bin/kontact} <>
+         [exec] (KOrganizer) {/usr/bin/korganizer} <>
+         [exec] (KPager) {/usr/bin/kpager} <>
+         [exec] (KPalmDOC) {/usr/bin/kpalmdoc} <>
+         [exec] (KPilot) {/usr/bin/kpilot} <>
+         [exec] (Kregexpeditor) {/usr/bin/kregexpeditor} <>
+         [exec] (KSayIt) {/usr/bin/ksayit} <>
+         [exec] (KSync) {/usr/bin/ksync} <>
+         [exec] (KTimer) {/usr/bin/ktimer} <>
+         [exec] (KTip) {/usr/bin/ktip} <>
+         [exec] (KTnef) {/usr/bin/ktnef} <>
+         [exec] (KWatchGnuPG) {/usr/bin/kwatchgnupg} <>
+         [exec] (mc) { x-terminal-emulator -T "mc" -e /usr/bin/mc} </usr/share/pixmaps/mc.xpm>
+         [exec] (MultiSynk) {/usr/bin/multisynk} <>
+         [exec] (Superkaramba) {/usr/bin/superkaramba} <>
+      [end]
+      [submenu] (Viewers) {}
+         [exec] (Adobe Reader) {/usr/bin/acroread} </usr/share/pixmaps/acroread.xpm>
+         [exec] (digikam) {/usr/bin/digikam} <>
+         [exec] (Gwenview) {/usr/bin/gwenview} </usr/share/pixmaps/gwenview.xpm>
+         [exec] (ImageMagick) {/usr/bin/display} <>
+         [exec] (KGhostView) {/usr/bin/kghostview} <>
+         [exec] (MPlayer) {/usr/bin/gmplayer} </usr/share/pixmaps/mplayer.xpm>
+         [exec] (Ogle) {/usr/bin/ogle} </usr/share/ogle/ogle.xpm>
+      [end]
+   [end]
+   [submenu] (Games) {}
+      [submenu] (Board) {}
+         [exec] (KBattleship) {/usr/games/kbattleship} <>
+         [exec] (KDE Reversi) {/usr/games/kreversi} <>
+         [exec] (KMahjongg) {/usr/games/kmahjongg} <>
+      [end]
+      [submenu] (Card) {}
+         [exec] (KDE Patience) {/usr/games/kpat} <>
+         [exec] (KDE Poker) {/usr/games/kpoker} <>
+      [end]
+      [submenu] (Tetris-like) {}
+         [exec] (Frozen-Bubble) {/usr/games/frozen-bubble} </usr/share/pixmaps/frozen-bubble.xpm>
+      [end]
+   [end]
+   [submenu] (Help) {}
+      [exec] (KDE Help Center) {/usr/bin/khelpcenter} <>
+   [end]
+   [submenu] (Screen) {}
+      [submenu] (Lock) {}
+         [exec] (Lock Screen (XScreenSaver\)) {/usr/bin/xscreensaver-command -lock} <>
+      [end]
+      [submenu] (Save) {}
+         [exec] (Activate ScreenSaver (Next\)) {/usr/bin/xscreensaver-command -next} <>
+         [exec] (Activate ScreenSaver (Previous\)) {/usr/bin/xscreensaver-command -prev} <>
+         [exec] (Activate ScreenSaver (Random\)) {/usr/bin/xscreensaver-command -activate} <>
+         [exec] (Demo Screen Hacks) {/usr/bin/xscreensaver-command -demo} <>
+         [exec] (Disable XScreenSaver) {/usr/bin/xscreensaver-command -exit} <>
+         [exec] (Enable XScreenSaver) {/usr/bin/xscreensaver} <>
+         [exec] (Reinitialize XScreenSaver) {/usr/bin/xscreensaver-command -restart} <>
+         [exec] (ScreenSaver Preferences) {/usr/bin/xscreensaver-command -prefs} <>
+      [end]
+   [end]
+   [submenu] (WindowManagers) {}
+      [restart] (FluxBox)  {/usr/bin/startfluxbox}
+   [end]
+   [submenu] (XShells) {}
+      [exec] (Aterm) {/usr/bin/aterm -name aterm -sl 3000 -tr -sr -sk -bg black -shading 25  -g 130x35 -tn xterm  -fn -misc-fixed-medium-r-normal--20-140-100-100-c-100-iso8859-1} <>
+      [exec] (Konsole) {/usr/bin/konsole} <>
+      [exec] (XTerm) {xterm} <>
+      [exec] (XTerm (Unicode\)) {uxterm} <>
+   [end]
+
+   [config] (Configuration)
+   [submenu] (Styles) {}
+      [stylesdir] (/usr/share/fluxbox/styles)
+      [stylesdir] (~/.fluxbox/styles)
+   [end]
+   [workspaces] (Workspaces)
+   [reconfig] (Reconfigure)
+   [restart] (Restart)
+   [exit] (Exit)
+
+[end]

@@ -1,0 +1,16 @@
+fbpager.alpha: 64
+fbpager.x: 100
+fbpager.y: 1014
+fbpager.workspace.width: 32
+fbpager.workspace.height: 30
+fbpager.windowColor: blue
+fbpager.focusedWindowColor: lightblue
+fbpager.backgroundColor: grey
+fbpager.currentBackgroundColor: white
+fbpager.borderColor: black
+fbpager.borderWidth: 1
+fbpager.followDrag: false
+fbpager.followMove: false
+fbpager.moveInWorkspaceButton: 1
+fbpager.followDrag: false
+fbpager.followMove: false

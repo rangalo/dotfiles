@@ -1,0 +1,95 @@
+!mouse actions added by fluxbox-update_configs
+OnTitlebar Mouse2 :StartTabbing
+
+!mouse actions added by fluxbox-update_configs
+OnTitlebar Double Mouse1 :Shade
+OnTitlebar Mouse3 :WindowMenu
+OnTitlebar Mouse4 :ShadeOn
+OnTitlebar Mouse5 :ShadeOff
+
+!mouse actions added by fluxbox-update_configs
+OnWindow Mod1 Mouse1 :MacroCmd {Raise} {Focus} {StartMoving}
+OnWindow Mod1 Mouse3 :MacroCmd {Raise} {Focus} {StartResizing BottomRight}
+
+!mouse actions added by fluxbox-update_configs
+OnDesktop Mouse1 :hideMenus
+OnDesktop Mouse2 :workspaceMenu
+OnDesktop Mouse3 :rootMenu
+OnDesktop Mouse4 :nextWorkspace
+OnDesktop Mouse5 :prevWorkspace
+!OnWindow Mod1 Mouse1 :StartMoving
+!OnWindow Mod1 Mouse3 :StartResizing BottomRight
+
+! Window Operations 
+Mod1 Tab :NextWindow
+Mod1 Shift Tab :PrevWindow
+Mod4 x :MaximizeWindow
+Mod4 v :MaximizeVertical
+Mod4 h :MaximizeHorizontal
+!Control Shift A :ArrangeWindows
+Mod4 Left  :PrevTab
+Mod4 Right :NextTab
+Mod4 Control Left  :MoveTabLeft
+Mod4 Control Right :MoveTabRight
+Mod4 Control D  :DetachCleint
+! send to workspace
+Control Shift Right :TakeToNextWorkspace
+Control Shift Left  :TakeToPrevWorkspace
+Control Shift F1 :TakeToWorkspace 1
+Control Shift F2 :TakeToWorkspace 2
+Control Shift F3 :TakeToWorkspace 3
+Control Shift F4 :TakeToWorkspace 4
+
+! Move Windows
+Mod1 Shift Left  :MoveLeft 10
+Mod1 Shift Right :MoveRight 10
+Mod1 Shift Up    :MoveUp 10
+Mod1 Shift Down  :MoveDown 10
+
+! Resize Windows
+Mod1 Control Left  :Resize -1 0
+Mod1 Control Right :Resize  1 0
+Mod1 Control Up    :Resize  0 -1
+Mod1 Control Down  :Resize  0 1
+
+Mod4 t  :ToggleDecor
+
+
+! Workspace operations
+Control F1 :Workspace 1
+Control F2 :Workspace 2
+Control F3 :Workspace 3
+Control F4 :Workspace 4
+
+! Programs
+Mod1 Control l :ExecCommand xscreensaver-command -lock
+Mod4 r  :ExecCommand fbrun -nearmouse -fg black -bg lightblue
+Mod4 e  :ExecCommand xterm
+Mod4 a  :ExecCommand urxvt
+Mod1 F4 :Close
+Mod4 m  :RootMenu
+Mod4 d  :ToggleCmd {ShowDesktop} {DeIconify all originquiet}
+Mod1 Control k :ExecCommand xkbSwitch
+None XF86Mail :ExecCommand /home/hardik/bin/toggleMonitor.sh
+
+! Multimedia Keys
+None XF86AudioMute :ExecCommand /home/hardik/bin/toggle-aumix-mute.sh
+None XF86AudioRaiseVolume :ExecCommand aumix -v +2 &
+None XF86AudioLowerVolume :ExecCommand aumix -v -2 &
+None XF86AudioPlay :ExecCommand /home/hardik/bin/control_mplayer_mpd.sh toggle
+None XF86AudioPrev :ExecCommand /home/hardik/bin/control_mplayer_mpd.sh back
+None XF86AudioNext :ExecCommand /home/hardik/bin/control_mplayer_mpd.sh fwd
+None XF86AudioStop :ExecCommand /home/hardik/bin/control_mplayer_mpd.sh stop
+
+! Audacious
+!None XF86AudioPlay :ExecCommand audacious --play-pause
+!None XF86AudioPrev :ExecCommand audacious --rew
+!None XF86AudioNext :ExecCommand audacious --fwd
+!None XF86AudioStop :ExecCommand audacious --stop
+
+! mpd 
+!None XF86AudioPlay :ExecCommand mpc toggle
+!None XF86AudioPrev :ExecCommand mpc prev
+!None XF86AudioNext :ExecCommand mpc next
+!None XF86AudioStop :ExecCommand mpc stop
+

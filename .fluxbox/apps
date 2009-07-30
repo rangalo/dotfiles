@@ -1,0 +1,21 @@
+[app] (name=acroread)
+  [Dimensions]	{1258 1003}
+[end]
+[app] (name=MPlayer)
+  [Dimensions]	{640 515}
+  [Position]	(UPPERLEFT)	{116 166}
+[end]
+[app] (name=Eclipse)
+  [Dimensions]	{1505 1013}
+  [Position]	(UPPERLEFT)	{96 7}
+[end]
+[app] (name=firefox-bin) (class=Firefox-bin)
+  [Position]	(UPPERLEFT)	{134 0}
+[end]
+[app] (name=skippy)
+  [Sticky]	{yes}
+[end]
+[app] (name=Navigator) (class=Iceweasel) (role=browser)
+  [Position]	(UPPERLEFT)	{142 0}
+[end]
+

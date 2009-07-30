@@ -1,0 +1,80 @@
+#---------------------------------------------
+# TINT2 CONFIG FILE
+#---------------------------------------------
+
+#---------------------------------------------
+# BACKGROUND AND BORDER
+#---------------------------------------------
+rounded = 7
+border_width = 1
+background_color = #000000 50
+border_color = #ffffff 0
+
+rounded = 5
+border_width = 0
+background_color = #ffffff 14
+border_color = #ffffff 5
+
+rounded = 5
+border_width = 0
+background_color = #ffffff 25
+border_color = #ffffff 69
+
+#---------------------------------------------
+# PANEL
+#---------------------------------------------
+panel_monitor = all
+panel_position = bottom center
+panel_size = 1000 30
+panel_margin = 30 2
+panel_padding = 5 2
+font_shadow = 0
+panel_background_id = 1
+
+#---------------------------------------------
+# TASKBAR
+#---------------------------------------------
+taskbar_mode = single_desktop
+taskbar_padding = 0 0 2
+taskbar_background_id = 0
+
+#---------------------------------------------
+# TASK
+#---------------------------------------------
+task_icon = 1
+task_text = 1
+task_width = 120
+task_centered = 1
+task_padding = 6 6
+task_font = cure 8
+task_font_color = #ffffff 69
+task_active_font_color = #ffffff 84
+task_background_id = 2
+task_active_background_id = 3
+
+#---------------------------------------------
+# SYSTRAYBAR
+#---------------------------------------------
+systray_padding = 4 3 4
+systray_background_id = 0
+
+#---------------------------------------------
+# CLOCK
+#---------------------------------------------
+time1_format = %H:%M
+time1_font = sans bold  8
+#time2_format = %A %d %B
+time2_font = cure 8
+clock_font_color = #ffffff 69
+clock_padding = 2 2
+clock_background_id = 0
+
+#---------------------------------------------
+# MOUSE ACTION ON TASK
+#---------------------------------------------
+mouse_middle = close
+mouse_right = none
+mouse_scroll_up = toggle
+mouse_scroll_down = iconify
+
+

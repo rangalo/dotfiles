@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+	<menu id="root-menu" label="Openbox 3">
+		<item label="Xterm">
+			<action name="Execute">
+				<execute>
+					xterm
+				</execute>
+			</action>
+		</item>
+		<item label="root-terminal">
+			<action name="Execute">
+				<execute>
+					xterm -e su - 
+				</execute>
+			</action>
+		</item>
+		<item label="Urxvt">
+			<action name="Execute">
+				<execute>
+					urxvt
+				</execute>
+			</action>
+		</item>
+		<item label="Iceweasel">
+			<action name="Execute">
+				<execute>
+					iceweasel
+				</execute>
+			</action>
+		</item>
+		<!-- This requires the presence of the 'menu' package to work -->
+		<item label="Audacious">
+			<action name="Execute">
+				<execute>
+					audacious
+				</execute>
+			</action>
+		</item>
+		<item label="MPlayer">
+			<action name="Execute">
+				<execute>
+					gmplayer
+				</execute>
+			</action>
+		</item>
+		<item label="eclipse">
+			<action name="Execute">
+				<execute>
+					/home/hardik/bin/startEclipse.sh
+				</execute>
+			</action>
+		</item>
+		<separator/>
+		<menu id="Debian"/>
+		<separator/>
+		<menu id="client-list-menu"/>
+		<separator/>
+		<item label="Obmenu">
+			<action name="Execute">
+				<execute>
+					obmenu
+				</execute>
+			</action>
+		</item>
+		<item label="ObConf">
+			<action name="Execute">
+				<execute>
+					obconf
+				</execute>
+			</action>
+		</item>
+		<separator/>
+		<item label="Reconfigure">
+			<action name="Reconfigure"/>
+		</item>
+		<item label="Restart">
+			<action name="Restart"/>
+		</item>
+		<separator/>
+		<item label="Lock">
+			<action name="Execute">
+				<execute>
+					xscreensaver-command -lock
+				</execute>
+			</action>
+		</item>
+		<item label="Exit">
+			<action name="Exit"/>
+		</item>
+		<item label="Reboot">
+			<action name="Execute">
+				<execute>
+					sudo /sbin/shutdown -r now
+				</execute>
+			</action>
+		</item>
+		<item label="Shutdown">
+			<action name="Execute">
+				<execute>
+					sudo /sbin/shutdown -h now
+				</execute>
+			</action>
+		</item>
+	</menu>
+</openbox_menu>
