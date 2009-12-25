@@ -1,0 +1,13 @@
+#-*-conf-*-
+
+#change the hardstatus settings
+startup_message off
+vbell off
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+#scrollback
+altscreen on
+# bindkey -k kD stuff "\010"
+termcapinfo xterm 'bc@:bs@'
+# termcapinfo rxvt
+defscrollback 5000
