@@ -16,9 +16,10 @@ import System.IO
 myLauncher :: String
 myLauncher = "`dmenu_path | dmenu -fn '-xos4-terminus-medium-r-*-*-14-*-*-*-*-*-*-*' -nb '#303030' -nf '#959595' -sf '#FFFFFF' -sb '#606060'`"
 myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
-    [ ((modMask .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
-    , ((modMask,               xK_p     ), spawn myLauncher)
-    , ((modMask .|. shiftMask, xK_c     ), kill)
+    [ ((modMask,                          xK_a), spawn $ XMonad.terminal conf)
+    , ((modMask,                          xK_e), spawn "xterm")
+    , ((modMask,                          xK_r), spawn myLauncher)
+    , ((mod1Mask,                         xK_F4), kill)
     , ((mod4Mask .|. controlMask, xK_Down     ), spawn "/home/hardik/bin/decrease-aumix-vol.sh")
     , ((0                       , 0x1008ff11  ), spawn "/home/hardik/bin/decrease-aumix-vol.sh")
     , ((mod4Mask .|. controlMask, xK_Up     ), spawn "/home/hardik/bin/increase-aumix-vol.sh")
@@ -28,7 +29,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask,               xK_space ), sendMessage NextLayout)
     , ((modMask .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)
     , ((modMask,               xK_n     ), refresh)
-    , ((modMask,               xK_Tab   ), windows W.focusDown)
+    , ((mod1Mask,               xK_Tab   ), windows W.focusDown)
     , ((modMask,               xK_j     ), windows W.focusDown)
     , ((modMask,               xK_k     ), windows W.focusUp  )
     , ((modMask,               xK_m     ), windows W.focusMaster  )
@@ -39,11 +40,12 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask              , xK_comma ), sendMessage (IncMasterN 1))
     , ((modMask              , xK_period), sendMessage (IncMasterN (-1)))
     , ((modMask .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
---    , ((modMask              , xK_q     ), restart "xmonad" True)
-    , ((modMask              , xK_q     ), spawn "killall conky dzen2 && xmonad --recompile && xmonad --restart")
+    , ((modMask              , xK_q     ), spawn "killall conky dzen2 yeahconsole && xmonad --recompile && xmonad --restart")
+--    , ((modMask              , xK_q     ), spawn "/home/hardik/bin/killStartupPrograms.sh && xmonad --recompile && xmonad --restart")
+--    , ((modMask              , xK_q     ), spawn "xmonad --recompile && xmonad --restart")
     , ((modMask .|.shiftMask .|. controlMask  , xK_c ), spawn "emacs ~/.xmonad/xmonad.hs")
     , ((modMask .|. controlMask               , xK_l ), spawn "xscreensaver-command -lock")
-    , ((modMask .|. controlMask               , xK_k ), spawn "python ~/pythonScripts/SwitchKbLayoutDesk/src/setNextKbLayout.py")
+    , ((modMask .|. controlMask               , xK_k ), spawn "python ~/desklets/SwitchKbLayoutDesk/src/setNextKbLayout.py")
     , ((modMask              , xK_b     ), sendMessage ToggleStruts)
     ]
     ++
@@ -65,9 +67,11 @@ myLayouts = tiled ||| Mirror tiled ||| noBorders Full ||| simpleTabbedBottom
  
 myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
+    , className =? "Smplayer"       --> doFloat
     , className =? "Gimp"           --> doFloat
     , className =? "Gimp"           --> doFloat
     , className =? "IDEA"           --> doFloat
+    , className =? "Eclipse"        --> doCenterFloat
     , resource  =? "desktop_window" --> doIgnore
     , isFullscreen                  --> doFullFloat 
     , isDialog                      --> doCenterFloat ]
@@ -80,8 +84,9 @@ myStartupHook = do
                 spawn "xscreensaver -no-splash"
                 spawn "numlockx on"
                 spawn "eval `cat $HOME/.fehbg`"
-                spawn "conky &"
---                spawn "conky -c ~/.conkyrc_time &"
+                spawn "(sleep 5 && conky) &"
+                spawn "(sleep 5 && conky -c ~/.conkyrc_dzen | dzen2 -ta r -x 600 -bg '#303030' -fn ' -*-lucida-*-*-normal-*-12-*-*-*-*-*-*-*') &"
+                spawn "(sleep 7 && yeahconsole) &"
  
  
 shortened :: Int -> String -> String
@@ -96,14 +101,14 @@ main = do
 
 h <- spawnPipe "dzen2 -w 600 -ta l -fn ' -*-lucida-*-*-normal-*-12-*-*-*-*-*-*-*' -bg '#303030' -fg '#FFFFFF'"
 
-spawnPipe myStatusbar
+-- spawnPipe myStatusbar
 
 xmonad $ defaultConfig {
         terminal           = "urxvt",
         focusFollowsMouse  = True,
         borderWidth        = 1,
-        modMask            = mod1Mask,
-        workspaces         = [" console "," dev "," misc "," browser "],
+        modMask            = mod4Mask,
+        workspaces         = ["1:console  ","2:dev  ","3:misc  ","4:browser  "],
         normalBorderColor  = "#303030",
         focusedBorderColor = "#55BBFF",
         keys               = myKeys,

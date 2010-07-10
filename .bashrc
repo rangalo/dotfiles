@@ -75,6 +75,32 @@ xterm*|rxvt*)
     ;;
 esac
 
+# utility functions
+
+function extract () {
+  if [ -f "$1" ]; then
+      case "$1" in
+          *.tar.bz2)   tar xvjf "$1"    ;;
+          *.tar.gz)    tar xvzf "$1"    ;;
+          *.tar.xz)    tar xvJf "$1"    ;;
+          *.bz2)       bunzip2 "$1"     ;;
+          *.rar)       unrar x "$1"     ;;
+          *.gz)        gunzip "$1"      ;;
+          *.tar)       tar xvf "$1"     ;;
+          *.tbz2)      tar xvjf "$1"    ;;
+          *.tgz)       tar xvzf "$1"    ;;
+          *.zip)       unzip "$1"       ;;
+          *.Z)         uncompress "$1"  ;;
+          *.7z)        7z x "$1"        ;;
+          *.xz)        unxz "$1"        ;;
+          *.exe)       cabextract "$1"  ;;
+          *)           echo "\`"$1"': unrecognized file compression" ;;
+      esac
+  else
+      echo "\`"$1"' is not a valid file"
+  fi
+}
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -98,90 +124,32 @@ alias la='ls -A'
 alias l='ls -CF'
 alias vi='vim'
 alias mc='mc -x'
+alias scpresume='rsync -Pazhv -e ssh'
 
 #PATH
-export PATH=${PATH}:/sbin:/usr/sbin/:/usr/local/sbin/:${HOME}/apps/eclipsea
+export PATH=${PATH}:/sbin:/usr/sbin/:/usr/local/sbin/:${HOME}/apps/eclipse
 
 # EDITOR
 export EDITOR=vim
 
-#PYTHONPATH
-#export PYTHONPATH=$PYTHONPATH:${HOME}/pythonScripts:${HOME}/projects/easy-connection
-export PYTHONPATH=$PYTHONPATH:${HOME}/pythonScripts
 
 # JDK
 export JAVA_HOME=${HOME}/apps/jdk
-export PATH=${PATH}:${JAVA_HOME}/bin
+export PATH=${JAVA_HOME}/bin:${PATH}
 
 # ANT
 export ANT_HOME=${HOME}/apps/ant
 export PATH=${PATH}:${ANT_HOME}/bin
-#export CLASSPATH=$CLASSPATH:${ANT_HOME}/lib/ant.jar
 
-#JUnit
-export JUNIT_HOME=${HOME}/apps/junit
-export CLASSPATH=$CLASSPATH:${JUNIT_HOME}/junit.jar
-
-#HSQLDB
-export HSQLDB_HOME=${HOME}/apps/hsqldb
-export CLASSPATH=$CLASSPATH:${HSQLDB_HOME}/lib/hsqldb.jar
-
-# javaee
-#export JAVAEE_HOME=${HOME}/apps/javaee/SDK
-#export PATH=${PATH}:${JAVAEE_HOME}/bin
-# CLASSPATH
-#export CLASSPATH=${JDK_HOME}/lib:${JAVAEE_HOME}/lib:${CLASSPATH}
+# maven
+export M2_HOME=/home/hardik/apps/maven
+export PATH=$PATH:$M2_HOME/bin
 
 # JBOSS
 export JBOSS_HOME=${HOME}/apps/jboss
 export PATH=$PATH:$JBOSS_HOME/bin
 
-# tomcat
-export TOMCAT_HOME=${HOME}/apps/tomcat
-#export TOMCAT_HOME=${JBOSS_HOME}/server/default/deploy
+# idea
+export JDK_HOME=$JAVA_HOME
+export PATH=$PATH:${HOME}/apps/idea/bin
 
-# GLASSFISH home
-export GLASSFISH_HOME=${HOME}/apps/glassfish/glassfish
-export PATH=$PATH:${GLASSFISH_HOME}/bin
-
-# Android SDK from google
-export SDK_ROOT=${HOME}/apps/android-sdk
-export PATH=${PATH}:${SDK_ROOT}/tools
-
-# GWT (Google Web Toolkit)
-export GWT_HOME=${HOME}/apps/gwt
-export PATH=$PATH:${GWT_HOME}
-
-# PostgreSQL database
-export PGSQL_HOME=/home/hardik/apps/pgsql
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${PGSQL_HOME}/lib
-export PATH=$PATH:${PGSQL_HOME}/bin
-export PGHOST=localhost
-export PGPORT=6021
-export PGDATA=${PGSQL_HOME}/Data
-
-
-
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/hardik/apps/wxPython/lib
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-#if [ -f /etc/bash_completion ]; then
-#    . /etc/bash_completion
-#fi
-
-# skippy
-export PATH=$PATH:/home/hardik/apps/skippy/bin
-
-# tint
-export PATH=$PATH:/home/hardik/apps/tint/usr/bin
-
-# visibility
-export PATH=$PATH:/home/hardik/apps/visibility/bin
-
-# ncmpc++
-export PATH=$PATH:/home/hardik/apps/ncmpcpp/bin
-
-# maven
-export M2_HOME=/home/hardik/apps/maven
-export PATH=$PATH:$M2_HOME/bin

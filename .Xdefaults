@@ -1,38 +1,21 @@
-aterm*visualBell:false
-aterm*loginShell:true
-aterm*background:black
-aterm*foreground:lightgray
-aterm*transparent:true
-aterm*shading:25
-aterm*font:-misc-fixed-medium-r-normal--22-*-*-*-c-*-iso8859-1
-aterm*boldFont:-misc-fixed-bold-r-normal--22-*-*-*-c-*-iso8859-1
-aterm*saveLines:3000
-aterm*cursorColor:green
-aterm*colorMode:true
-aterm*pointerColor:yellow
-aterm*pointerColor2:yellow
-aterm*borderWidth:1
-aterm*truetintingType:true
-aterm*scrollBar_right:true
-aterm*transpscrollbar:true
-aterm*fade:80
-aterm*termName:rxvt
-
 ! rxvt-unicode
 URxvt*tintColor: #999
 URxvt*shading: 25
+URxvt*termName: rxvt
 URxvt*font: xft:Mono-12
 URxvt*scrollBar :false
-!URxvt*scrollstyle: xterm
-!URxvt*scrollBar_right: True
 URxvt*scrollTtyOutput: False
 URxvt*saveLines: 5000
-!URxvt*borderLess: True
 URxvt*inheritPixmap: True
 URxvt*background:black
 URxvt*foreground:lightgray
 URxvt*modifier: alt
- 
+URxvt*buffered: true
+URxvt*cursorColor: green
+URxvt.perl-ext-common: default,matcher,searchable-scrollback
+URxvt.urlLauncher: chromium
+URxvt.matcher.button: 1
+
 
 XTerm*visualBell:false
 XTerm*font:-misc-fixed-medium-r-normal--22-*-*-*-c-*-iso8859-1
@@ -42,9 +25,34 @@ XTerm*background:black
 XTerm*foreground:lightgray
 
 yeahconsole*termName: mrxvt
-yeahconsole*xOffset: 225
+yeahconsole*xOffset: 375
 yeahconsole*consoleHeight: 20
 yeahconsole*screenWidth: 1200
 yeahconsole*toggleKey: None+F12
 yeahconsole*aniDelay: 40
 yeahconsole*stepSize: 10
+
+!black 
+*color0 : #222222
+*color8 : #454545
+!red
+*color1 : #F92672
+*color9 : #F92672
+!green
+*color2 : #A6E22E
+*color10: #A6E22E
+!yellow
+*color3 : #FD971F
+*color11: #FD971F
+!blue
+*color4 : #4682B4
+*color12: #4682B4
+!magenta
+*color5 : #AE81FF
+*color13: #AE81FF
+!cyan
+*color6: #89b6e2
+*color14: #46a4ff
+!white
+*color7 : #FFFFFF
+*color15: #FFFFFF

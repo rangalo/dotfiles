@@ -148,5 +148,4 @@ use_spacer none
 # stuff after 'TEXT' will be formatted on screen
 
 TEXT
-^fg(grey)Temp:^fg(white)${execi 1800 /home/hardik/conkyScripts/weather/weather.sh "Munich,Germany" ct}  ^fg(grey)|  ^fg(grey)CPU:^fg(white)${cpu cpu0}%  ^fg(grey)|  RAM: ^fg(white)$mem/$memmax - $memperc% ^fg(grey)  |  ^fg(white) ${time %a, %d.%m.%Y %H:%M}
-
+^fg(lightblue)Weather:^fg(white)${execi 1800 /home/hardik/conkyScripts/weather/weather.sh "Munich,Germany" cc}^fg(lightblue)  ^fg(lightblue)Temp:^fg(white)${execi 1800 /home/hardik/conkyScripts/weather/weather.sh "Munich,Germany" ct}  ^fg(lightblue)CPU:^fg(white)${cpu cpu0}%  ^fg(lightblue)RAM: ^fg(white)$mem/$memmax - $memperc% ^fg(lightblue)   ^fg(pink) ${time %a, %d.%m.%Y %H:%M}
