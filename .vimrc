@@ -39,6 +39,7 @@ set showmatch
 set smartindent
 set autoindent
 set showcmd
+" set mouse=a
 
 filetype plugin indent on 
 " Enable the ruler with the format:
@@ -71,6 +72,9 @@ imap <C-v> <Esc><C-v>a
 
 
 let g:pydiction_location = "/home/hardik/.vim/pydiction/complete-dict"
+
+" closetags script
+au Filetype html,xml,xsl,erb source ~/.vim/scripts/closetag.vim
 
 autocmd BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 autocmd BufRead *.upl set syntax=html
