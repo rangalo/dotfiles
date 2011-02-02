@@ -20,6 +20,7 @@ NC='\e[0m'              # No Color
 # for examples
 
 # If not running interactively, don't do anything
+
 [ -z "$PS1" ] && return
 
 # don't put duplicate lines in the history. See bash(1) for more options
@@ -47,33 +48,24 @@ xterm-color)
     ;;
 esac
 
+function parse_git_branch {
+    ref=$(git symbolic-ref HEAD 2> /dev/null) || { echo "" ; return ; }
+    BRNAME=${ref#refs/heads/}
+    git_status="$(git status 2> /dev/null)"
+    if [[ ${git_status} =~ "working directory clean" ]]; then
+        echo "\[${NC}\](\[${green}\]${BRNAME}\[${NC}\])"
+    else
+        echo "\[${NC}\](\[${red}\]${BRNAME}\[${NC}\])"
+    fi
+}
+
 # Comment in the above and uncomment this below for a color prompt
 #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
-ME=`id -u`
-if [ $ME = 0 ]; then
-    PS1="\[${purple}\][\[${green}\]\u\[${NC}\]@\h: \[${cyan}\]\W \[${purple}\]]\[${NC}\]# "
-else
-    PS1="\[${purple}\][\[${green}\]\u\[${NC}\]@\h: \[${cyan}\]\W \[${purple}\]]\[${NC}\]$ "
-fi
+function prompt_func() {
+PS1="\[${purple}\][\[${green}\]\u\[${NC}\]@\h: \[${cyan}\]\W$(parse_git_branch)\[${purple}\]]\[${NC}\]\\$ "
+}
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-	PROMPT_COMMAND='echo -ne "\033]0;`basename \"${PWD}\"`\007"'
-    # turn off the beeps
-    xset -b
-
-    ;;
-    Eterm*)
-	PROMPT_COMMAND='echo -ne "\033]0;`basename \"${PWD}\"`\007"'
-    # turn off the beeps
-    xset -b
-    ;;
-
-*)
-    ;;
-esac
 
 # utility functions
 
@@ -101,6 +93,8 @@ function extract () {
   fi
 }
 
+
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -118,11 +112,12 @@ if [ "$TERM" != "dumb" ]; then
     #alias vdir='ls --color=auto --format=long'
 fi
 
-# some more ls aliases
+# some more aliases
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 alias vi='vim'
+alias grep='grep --color=auto'
 alias mc='mc -x'
 alias scpresume='rsync -Pazhv -e ssh'
 
@@ -131,6 +126,8 @@ export PATH=${PATH}:/sbin:/usr/sbin/:/usr/local/sbin/:${HOME}/apps/eclipse
 
 # EDITOR
 export EDITOR=vim
+
+PROMPT_COMMAND=prompt_func
 
 
 # JDK
@@ -153,3 +150,9 @@ export PATH=$PATH:$JBOSS_HOME/bin
 export JDK_HOME=$JAVA_HOME
 export PATH=$PATH:${HOME}/apps/idea/bin
 
+
+
+ME=`id -u`
+if [[ $ME != 0 ]]; then
+    [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+fi
