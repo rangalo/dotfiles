@@ -25,6 +25,8 @@ NC='\e[0m'              # No Color
 
 # don't put duplicate lines in the history. See bash(1) for more options
 #export HISTCONTROL=ignoredups
+export HISTCONTROL=ignoreboth
+export HISTSIZE=2000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -120,6 +122,7 @@ alias vi='vim'
 alias grep='grep --color=auto'
 alias mc='mc -x'
 alias scpresume='rsync -Pazhv -e ssh'
+alias less='less -R'
 
 #PATH
 export PATH=${PATH}:/sbin:/usr/sbin/:/usr/local/sbin/:${HOME}/apps/eclipse
@@ -150,9 +153,17 @@ export PATH=$PATH:$JBOSS_HOME/bin
 export JDK_HOME=$JAVA_HOME
 export PATH=$PATH:${HOME}/apps/idea/bin
 
+# android
+export ANDROID_HOME=${HOME}/apps/android-sdk
+export PATH=$PATH:${ANDROID_HOME}/tools
+export PATH=$PATH:${ANDROID_HOME}/platform-tools
+
+
 
 
 ME=`id -u`
 if [[ $ME != 0 ]]; then
     [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 fi
+
+[[ -s "$HOME/.git-completion.sh" ]] && source "$HOME/.git-completion.sh"
