@@ -15,6 +15,40 @@ YELLOW='\e[133m'
 green='\e[0;32m'
 NC='\e[0m'              # No Color
 
+#PATH
+export PATH=${PATH}:/sbin:/usr/sbin/:/usr/local/sbin/:${HOME}/apps/eclipse
+
+# EDITOR
+export EDITOR=vim
+
+PROMPT_COMMAND=prompt_func
+
+
+# JDK
+export JAVA_HOME=${HOME}/apps/jdk
+export PATH=${JAVA_HOME}/bin:${PATH}
+
+# ANT
+export ANT_HOME=${HOME}/apps/ant
+export PATH=${PATH}:${ANT_HOME}/bin
+
+# maven
+export M2_HOME=/home/hardik/apps/maven
+export PATH=$PATH:$M2_HOME/bin
+
+# JBOSS
+export JBOSS_HOME=${HOME}/apps/jboss
+export PATH=$PATH:$JBOSS_HOME/bin
+
+# idea
+export JDK_HOME=$JAVA_HOME
+export PATH=$PATH:${HOME}/apps/idea/bin
+
+# android
+export ANDROID_HOME=${HOME}/apps/android-sdk
+export PATH=$PATH:${ANDROID_HOME}/tools
+export PATH=$PATH:${ANDROID_HOME}/platform-tools
+
 
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -27,6 +61,7 @@ NC='\e[0m'              # No Color
 #export HISTCONTROL=ignoredups
 export HISTCONTROL=ignoreboth
 export HISTSIZE=2000
+export HISTTIMEFORMAT='%h/%d - %H:%M:%S '
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -123,40 +158,6 @@ alias grep='grep --color=auto'
 alias mc='mc -x'
 alias scpresume='rsync -Pazhv -e ssh'
 alias less='less -R'
-
-#PATH
-export PATH=${PATH}:/sbin:/usr/sbin/:/usr/local/sbin/:${HOME}/apps/eclipse
-
-# EDITOR
-export EDITOR=vim
-
-PROMPT_COMMAND=prompt_func
-
-
-# JDK
-export JAVA_HOME=${HOME}/apps/jdk
-export PATH=${JAVA_HOME}/bin:${PATH}
-
-# ANT
-export ANT_HOME=${HOME}/apps/ant
-export PATH=${PATH}:${ANT_HOME}/bin
-
-# maven
-export M2_HOME=/home/hardik/apps/maven
-export PATH=$PATH:$M2_HOME/bin
-
-# JBOSS
-export JBOSS_HOME=${HOME}/apps/jboss
-export PATH=$PATH:$JBOSS_HOME/bin
-
-# idea
-export JDK_HOME=$JAVA_HOME
-export PATH=$PATH:${HOME}/apps/idea/bin
-
-# android
-export ANDROID_HOME=${HOME}/apps/android-sdk
-export PATH=$PATH:${ANDROID_HOME}/tools
-export PATH=$PATH:${ANDROID_HOME}/platform-tools
 
 
 
