@@ -15,10 +15,12 @@ import System.IO
 -- -xos4-terminus-medium-r-*-*-14-*-*-*-*-*-*-*
 myLauncher :: String
 myLauncher = "`dmenu_path | dmenu -fn '-xos4-terminus-medium-r-*-*-14-*-*-*-*-*-*-*' -nb '#303030' -nf '#959595' -sf '#FFFFFF' -sb '#606060'`"
+newLauncher = "`cat /home/hardik/.dmenu_cache |  dmenu -fn '-xos4-terminus-medium-r-*-*-14-*-*-*-*-*-*-*' -nb '#303030' -nf '#959595' -sf '#FFFFFF' -sb '#606060'`"
+-- newLauncher = " /usr/bin/gmrun"
 myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     [ ((modMask,                          xK_a), spawn $ XMonad.terminal conf)
     , ((modMask,                          xK_e), spawn "xterm")
-    , ((modMask,                          xK_r), spawn myLauncher)
+    , ((modMask,                          xK_r), spawn newLauncher)
     , ((mod1Mask,                         xK_F4), kill)
     , ((mod4Mask .|. controlMask, xK_Down     ), spawn "/home/hardik/bin/decrease-aumix-vol.sh")
     , ((0                       , 0x1008ff11  ), spawn "/home/hardik/bin/decrease-aumix-vol.sh")
@@ -35,7 +37,9 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask,               xK_m     ), windows W.focusMaster  )
     , ((modMask,               xK_Return), windows W.swapMaster)
     , ((modMask .|. shiftMask, xK_j     ), windows W.swapDown  )
-    , ((modMask .|. shiftMask, xK_k     ), windows W.swapUp    ) , ((modMask,               xK_h     ), sendMessage Shrink) , ((modMask,               xK_l     ), sendMessage Expand)
+    , ((modMask .|. shiftMask, xK_k     ), windows W.swapUp    ) 
+    , ((modMask,               xK_h     ), sendMessage Shrink) 
+    , ((modMask,               xK_l     ), sendMessage Expand)
     , ((modMask,               xK_t     ), withFocused $ windows . W.sink)
     , ((modMask              , xK_comma ), sendMessage (IncMasterN 1))
     , ((modMask              , xK_period), sendMessage (IncMasterN (-1)))
@@ -46,11 +50,19 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask .|.shiftMask .|. controlMask  , xK_c ), spawn "emacs ~/.xmonad/xmonad.hs")
     , ((modMask .|. controlMask               , xK_l ), spawn "xscreensaver-command -lock")
     , ((modMask .|. controlMask               , xK_k ), spawn "python ~/desklets/SwitchKbLayoutDesk/src/setNextKbLayout.py")
+    , ((mod4Mask .|. controlMask               , xK_p ), spawn "mpc toggle")
+    , ((mod4Mask .|. controlMask               , xK_s ), spawn "mpc stop")
+    , ((mod4Mask .|. controlMask               , xK_period ), spawn "mpc next")
+    , ((mod4Mask .|. controlMask               , xK_comma), spawn "mpc prev")
+    , ((0                                      , 0x1008ff14 ), spawn "mpc toggle")
+    , ((0                                      , 0x1008ff15 ), spawn "mpc stop")
+    , ((0                                      , 0x1008ff17 ), spawn "mpc next")
+    , ((0                                      , 0x1008ff16 ), spawn "mpc prev")
     , ((modMask              , xK_b     ), sendMessage ToggleStruts)
     ]
     ++
     [((m .|. controlMask, k), windows $ f i)
-        | (i, k) <- zip (XMonad.workspaces conf) [xK_F1 .. xK_F4]
+        | (i, k) <- zip (XMonad.workspaces conf) [xK_F1 .. xK_F6]
         , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
  
 myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
@@ -71,6 +83,7 @@ myManageHook = composeAll
     , className =? "Gimp"           --> doFloat
     , className =? "Gimp"           --> doFloat
     , className =? "IDEA"           --> doFloat
+    , className =? "Picasa"         --> doFloat
     , className =? "Eclipse"        --> doCenterFloat
     , resource  =? "desktop_window" --> doIgnore
     , isFullscreen                  --> doFullFloat 
@@ -108,7 +121,7 @@ xmonad $ defaultConfig {
         focusFollowsMouse  = True,
         borderWidth        = 1,
         modMask            = mod4Mask,
-        workspaces         = ["1:console  ","2:dev  ","3:misc  ","4:browser  "],
+        workspaces         = ["1:console  ","2:dev  ","3:misc  ","4:browser  ", "5:scratch1 ", "6:scratch2 " ],
         normalBorderColor  = "#303030",
         focusedBorderColor = "#55BBFF",
         keys               = myKeys,
