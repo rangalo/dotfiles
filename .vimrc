@@ -39,6 +39,7 @@ set showmatch
 set smartindent
 set autoindent
 set showcmd
+set wildmenu 
 " set mouse=a
 
 filetype plugin indent on 
@@ -64,6 +65,11 @@ set viminfo=c,h,'10,\"100,:20,%,n~/.viminfo
 :nmap ,td :tabclose <cr>
 :nmap <C-N><C-N> :set invnumber <CR>
 imap ,,, <esc>diwi<<esc>pa><cr></<esc>pa><esc>kA
+
+" Fuzy finder 
+nmap ,ff :FufCoverageFile<CR>
+nmap ,ft :tabnew<CR>:FufCoverageFile<CR>
+nmap ,fb :FufBuffer<CR>
 
 " copy/paste to/from system clipboard
 vmap <C-c> y: call system("xclip -i -selection clipboard", getreg("\""))<CR>
