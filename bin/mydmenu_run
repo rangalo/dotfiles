@@ -1,0 +1,10 @@
+#!/bin/sh
+CACHE=${XDG_CACHE_HOME:-"$HOME/.cache"}/dmenu_run
+(
+	IFS=:
+	if test "`ls -dt $PATH "$CACHE" 2> /dev/null | sed 1q`" != "$CACHE"; then
+		mkdir -p "`dirname "$CACHE"`" && stest -lsx $PATH | sort -u > "$CACHE"
+	fi
+)
+echo $CACHE
+cmd=`dmenu   -nb '#303030' -nf '#959595' -sf '#FFFFFF' -sb '#606060'  < "$CACHE"` && exec sh -c "$cmd"
