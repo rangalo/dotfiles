@@ -23,7 +23,8 @@ hi Comment ctermfg=darkcyan
 hi Identifier ctermfg=lightgreen
 hi PreProc cterm=underline
 hi Search ctermbg=darkblue cterm=underline
-
+" hi Pmenu ctermfg=White ctermbg=LightMagenta  cterm=Bold
+hi PmenuSel ctermfg=White ctermbg=Black  cterm=Bold
 syntax on
 set nocompatible
 set bs=2
