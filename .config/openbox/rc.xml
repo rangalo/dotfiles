@@ -34,9 +34,10 @@
     <!-- with Smart placement on a multi-monitor system, try to place new windows
        on: 'Any' - any monitor, 'Mouse' - where the mouse is, 'Active' - where
        the active window is -->
+    <primaryMonitor/>
   </placement>
   <theme>
-    <name>Onyx</name>
+    <name>Syscrash</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -51,12 +52,12 @@
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>sans</name>
+      <name>cursor.pcf</name>
       <size>8</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
@@ -86,14 +87,14 @@
       <slant>normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
-    <font place="OnScreenDisplay">
-      <name>sans</name>
-      <size>9</size>
-      <!-- font size in points -->
-      <weight>bold</weight>
-      <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
-      <!-- 'italic' or 'normal' -->
+    <font place="ActiveOnScreenDisplay">
+      <name/>
+    </font>
+    <font place="InactiveOnScreenDisplay">
+      <name>Sans</name>
+      <size>8</size>
+      <weight/>
+      <slant/>
     </font>
   </theme>
   <desktops>
@@ -105,13 +106,14 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>4</number>
+    <number>5</number>
     <firstdesk>1</firstdesk>
     <names>
       <name>Console</name>
-      <name>Eclipse</name>
+      <name>Dev</name>
       <name>Misc</name>
       <name>Browser</name>
+      <name>ssh</name>
     </names>
     <popupTime>875</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -138,13 +140,13 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>10</top>
-    <bottom>25</bottom>
-    <left>10</left>
-    <right>10</right>
+    <top>0</top>
+    <bottom>33</bottom>
+    <left>0</left>
+    <right>0</right>
   </margins>
   <dock>
-    <position>BottomRight</position>
+    <position>BottomLeft</position>
     <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
     <floatingX>0</floatingX>
     <floatingY>0</floatingY>
@@ -164,54 +166,64 @@
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
     <!-- Keybindings for desktop switching -->
-    <keybind key="S-C-Left">
+    <keybind key="S-W-Left">
       <action name="SendToDesktopLeft">
         <dialog>no</dialog>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-C-Right">
+    <keybind key="S-W-Right">
       <action name="sendtodesktopright">
       </action>
     </keybind>
-    <keybind key="S-C-F1">
+    <keybind key="S-W-F1">
       <action name="SendToDesktop">
         <desktop>1</desktop>
       </action>
     </keybind>
-    <keybind key="S-C-F2">
+    <keybind key="S-W-F2">
       <action name="SendToDesktop">
         <desktop>2</desktop>
       </action>
     </keybind>
-    <keybind key="S-C-F3">
+    <keybind key="S-W-F3">
       <action name="SendToDesktop">
         <desktop>3</desktop>
       </action>
     </keybind>
-    <keybind key="S-C-F4">
+    <keybind key="S-W-F4">
       <action name="SendToDesktop">
         <desktop>4</desktop>
       </action>
     </keybind>
-    <keybind key="C-F1">
+    <keybind key="S-W-F5">
+      <action name="SendToDesktop">
+        <desktop>5</desktop>
+      </action>
+    </keybind>
+    <keybind key="W-F1">
       <action name="Desktop">
         <desktop>1</desktop>
       </action>
     </keybind>
-    <keybind key="C-F2">
+    <keybind key="W-F2">
       <action name="Desktop">
         <desktop>2</desktop>
       </action>
     </keybind>
-    <keybind key="C-F3">
+    <keybind key="W-F3">
       <action name="Desktop">
         <desktop>3</desktop>
       </action>
     </keybind>
-    <keybind key="C-F4">
+    <keybind key="W-F4">
       <action name="Desktop">
         <desktop>4</desktop>
+      </action>
+    </keybind>
+    <keybind key="W-F5">
+      <action name="Desktop">
+        <desktop>5</desktop>
       </action>
     </keybind>
     <keybind key="S-A-Right">
@@ -238,22 +250,22 @@
         <y>5</y>
       </action>
     </keybind>
-    <keybind key="C-A-Left">
+    <keybind key="W-A-Left">
       <action name="ResizeRelative">
         <right>-2</right>
       </action>
     </keybind>
-    <keybind key="C-A-Right">
+    <keybind key="W-A-Right">
       <action name="ResizeRelative">
         <right>2</right>
       </action>
     </keybind>
-    <keybind key="C-A-Up">
+    <keybind key="W-A-Up">
       <action name="ResizeRelative">
         <bottom>-2</bottom>
       </action>
     </keybind>
-    <keybind key="C-A-Down">
+    <keybind key="W-A-Down">
       <action name="ResizeRelative">
         <bottom>2</bottom>
       </action>
@@ -308,15 +320,15 @@
     </keybind>
     <keybind key="W-r">
       <action name="Execute">
-        <command>fbrun -nearmouse -fg black -bg lightblue</command>
+        <command>gmrun</command>
       </action>
     </keybind>
-    <keybind key="C-A-k">
+    <keybind key="C-W-k">
       <action name="Execute">
-        <command>/home/hardik/bin/xkbSwitch</command>
+        <command>/home/hardik/bin/setNextKeyboardLayout.sh</command>
       </action>
     </keybind>
-    <keybind key="C-A-l">
+    <keybind key="C-W-l">
       <action name="Execute">
         <command> xscreensaver-command -lock</command>
       </action>
@@ -324,22 +336,17 @@
     <!-- multimedia keys -->
     <keybind key="XF86AudioMute">
       <action name="Execute">
-        <command>/home/hardik/bin/toggle-aumix-mute.sh </command>
-      </action>
-    </keybind>
-    <keybind key="XF86Audio">
-      <action name="Execute">
-        <command>/home/hardik/bin/toggle-aumix-mute.sh </command>
+        <command>/home/hardik/bin/toggle-aumix-mute.sh</command>
       </action>
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>aumix -v +2</command>
+        <command>/home/hardik/bin/increase-aumix-vol.sh</command>
       </action>
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>aumix -v -2</command>
+        <command>/home/hardik/bin/decrease-aumix-vol.sh</command>
       </action>
     </keybind>
     <!-- mpd  -->
@@ -408,10 +415,10 @@
       <mousebind button="A-Down" action="Click">
         <action name="DesktopNext"/>
       </mousebind>
-      <mousebind button="C-A-Up" action="Click">
+      <mousebind button="W-A-Up" action="Click">
         <action name="DesktopPrevious"/>
       </mousebind>
-      <mousebind button="C-A-Down" action="Click">
+      <mousebind button="W-A-Down" action="Click">
         <action name="DesktopNext"/>
       </mousebind>
       <mousebind button="A-S-Up" action="Click">
@@ -705,9 +712,7 @@
     <!-- You can specify more than one menu file in here and they are all loaded,
        just don't make menu ids clash or, well, it'll be kind of pointless -->
     <!-- default menu file (or custom one in $HOME/.config/openbox/) -->
-    <!-- system menu files on Debian systems -->
-    <file>/var/lib/openbox/debian-menu.xml</file>
-    <file>debian-menu.xml</file>
+    <file>arch-menu.xml</file>
     <file>menu.xml</file>
     <hideDelay>200</hideDelay>
     <!-- if a press-release lasts longer than this setting (in milliseconds), the
@@ -813,7 +818,7 @@
     </application>
     <application class="Trayer">
       <desktop>all</desktop>
-      <layer>bellow</layer>
+      <layer>below</layer>
       <skip_pager>yes</skip_pager>
       <skip_taskbar>yes</skip_taskbar>
     </application>

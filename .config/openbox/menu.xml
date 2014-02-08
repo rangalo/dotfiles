@@ -22,25 +22,18 @@
 				</execute>
 			</action>
 		</item>
-		<item label="Iceweasel">
+		<item label="Firefox">
 			<action name="Execute">
 				<execute>
-					iceweasel
+					firefox
 				</execute>
 			</action>
 		</item>
 		<!-- This requires the presence of the 'menu' package to work -->
-		<item label="Audacious">
-			<action name="Execute">
-				<execute>
-					audacious
-				</execute>
-			</action>
-		</item>
 		<item label="MPlayer">
 			<action name="Execute">
 				<execute>
-					gmplayer
+					smplayer
 				</execute>
 			</action>
 		</item>
@@ -52,7 +45,7 @@
 			</action>
 		</item>
 		<separator/>
-		<menu id="Debian"/>
+		<menu id="Arch"/>
 		<separator/>
 		<menu id="client-list-menu"/>
 		<separator/>

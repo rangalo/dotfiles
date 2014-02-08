@@ -14,13 +14,12 @@ import System.IO
  
 -- -xos4-terminus-medium-r-*-*-14-*-*-*-*-*-*-*
 myLauncher :: String
-myLauncher = "`dmenu_path | dmenu -fn '-xos4-terminus-medium-r-*-*-14-*-*-*-*-*-*-*' -nb '#303030' -nf '#959595' -sf '#FFFFFF' -sb '#606060'`"
-newLauncher = "`cat /home/hardik/.dmenu_cache |  dmenu -fn '-xos4-terminus-medium-r-*-*-14-*-*-*-*-*-*-*' -nb '#303030' -nf '#959595' -sf '#FFFFFF' -sb '#606060'`"
+myLauncher = "/home/hardik/bin/mydmenu_run"
 -- newLauncher = " /usr/bin/gmrun"
 myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     [ ((modMask,                          xK_a), spawn $ XMonad.terminal conf)
     , ((modMask,                          xK_e), spawn "xterm")
-    , ((modMask,                          xK_r), spawn newLauncher)
+    , ((modMask,                          xK_r), spawn myLauncher)
     , ((mod1Mask,                         xK_F4), kill)
     , ((mod4Mask .|. controlMask, xK_Down     ), spawn "/home/hardik/bin/decrease-aumix-vol.sh")
     , ((0                       , 0x1008ff11  ), spawn "/home/hardik/bin/decrease-aumix-vol.sh")
@@ -149,6 +148,6 @@ xmonad $ defaultConfig {
                         ,ppSep = " "
                         ,ppWsSep = ""
                         ,ppOutput = hPutStrLn h
-                        }
+                        } 
     }
  

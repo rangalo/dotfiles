@@ -1,0 +1,10 @@
+# Set up my own path
+export PATH=$HOME/bin:$PATH
+
+# Change the language used from the system's default
+#export LC_CTYPE=ja_JP.utf8
+
+# SCIM for typing non-english characters
+#export XMODIFIERS=@im=SCIM
+#export GTK_IM_MODULE=scim
+#export QT_IM_MODULE=scim

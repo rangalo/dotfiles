@@ -17,6 +17,8 @@ xset -b
 
 # volwheel &
 
+numlockx on
+xrdb -load ~/.Xdafaults
 xscreensaver  -no-splash &
 (sleep 1 && /usr/bin/yeahconsole ) &
 # gkrellm -w &
@@ -28,12 +30,12 @@ xscreensaver  -no-splash &
 
 # (sleep 3 && pypanel) &
 (sleep 3 && tint2) &
-(sleep 2 && /usr/bin/visibility) &
+# (sleep 2 && /usr/bin/visibility) &
+(sleep 2 && neap) &
 
 
 # wallpaper
 eval `cat $HOME/.fehbg` &
-
 
 (sleep 8 && conky) &
 # (sleep 2 && conky -c /home/hardik/.conkyrc_mpd) &
