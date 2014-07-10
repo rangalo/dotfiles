@@ -25,6 +25,7 @@ hi PreProc cterm=underline
 hi Search ctermbg=darkblue cterm=underline
 " hi Pmenu ctermfg=White ctermbg=LightMagenta  cterm=Bold
 hi PmenuSel ctermfg=White ctermbg=Black  cterm=Bold
+execute pathogen#infect()
 syntax on
 set nocompatible
 set bs=2
@@ -77,7 +78,7 @@ vmap <C-c> y: call system("xclip -i -selection clipboard", getreg("\""))<CR>
 nmap <C-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 imap <C-v> <Esc><C-v>a
 
-
+let g:NERDTreeDirArrows=0
 let g:pydiction_location = "/home/hardik/.vim/pydiction/complete-dict"
 
 " closetags script

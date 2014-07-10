@@ -17,6 +17,7 @@ NC='\e[0m'              # No Color
 
 #PATH
 export PATH=${PATH}:/sbin:/usr/sbin/:/usr/local/sbin/:${HOME}/apps/eclipse
+export PATH=${PATH}:${HOME}/bin
 
 # EDITOR
 export EDITOR=vim
@@ -27,6 +28,11 @@ PROMPT_COMMAND=prompt_func
 # JDK
 export JAVA_HOME=${HOME}/apps/jdk
 export PATH=${JAVA_HOME}/bin:${PATH}
+export JAVA_OPTS="-XX:MaxPermSize=256m"
+
+# TOMCAT / CATALINA
+export CATALINA_HOME=${HOME}/apps/tomcat
+export CATALINA_OPTS="-XX:MaxPermSize=256m -Xmx1024m"
 
 # ANT
 export ANT_HOME=${HOME}/apps/ant
@@ -49,6 +55,20 @@ export ANDROID_HOME=${HOME}/apps/android-sdk
 export PATH=$PATH:${ANDROID_HOME}/tools
 export PATH=$PATH:${ANDROID_HOME}/platform-tools
 
+
+# hadoop
+# Set Hadoop-related environment variables
+export HADOOP_HOME=${HOME}/apps/hadoop
+export PATH=$PATH:$HADOOP_HOME/bin
+
+# scala: sbt
+export SBT_HOME=${HOME}/apps/sbt
+export PATH=${PATH}:${SBT_HOME}/bin
+
+# mongodb:
+export MONGO_HOME=${HOME}/apps/mongodb
+export PATH=${PATH}:${MONGO_HOME}/bin
+export MONGO_DB_PATH=${HOME}/apps/mongo_data/db
 
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -158,9 +178,8 @@ alias grep='grep --color=auto'
 alias mc='mc -x'
 alias scpresume='rsync -Pazhv -e ssh'
 alias less='less -R'
-
-
-
+alias mongod="${MONGO_HOME}/bin/mongod --dbpath $MONGO_DB_PATH"
+[[ -s "/usr/share/bash-completion/bash_completion" ]] && source "/usr/share/bash-completion/bash_completion"
 
 ME=`id -u`
 if [[ $ME != 0 ]]; then
@@ -168,3 +187,37 @@ if [[ $ME != 0 ]]; then
 fi
 
 [[ -s "$HOME/.git-completion.sh" ]] && source "$HOME/.git-completion.sh"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+
+#### maxdome specific aliases ####
+
+# alias jumphost="ssh -A hmehta@10.228.46.243"
+alias jumphost="ssh -A hmehta@mxd-jump"
+
+# DB alias
+alias proddb='mysql -u hmehta -h 127.0.0.1 -P 13306 -D bbedb -paeDae3xie9yeica --auto-rehash'
+alias proddb_rw='mysql -u bbe_rw -h 127.0.0.1 -P 13306 -D bbedb -p574r647347l4n715 --auto-rehash'
+alias proddbStat='mysql -u hmehta -h dbmy-mxd-stat.schlund.de bbedb -paeDae3xie9yeica --auto-rehash'
+alias testdbott='mysql -u mxddev -h lnxv-5843.srv.mediaways.net -p48sFhdf4jx -D bbedb --auto-rehash'
+alias testdbmmw=' mysql -u mxddev -h lnxv-5855.srv.mediaways.net  -p48sFhdf4jx -D bbedb --auto-rehash'
+alias stageb='mysql -h 127.0.0.1 -P 23306 -u hmehta -peeK7yaezood4shi -D bbedb --auto-rehash'
+alias stagedb_rw='mysql -h 127.0.0.1 -P 23306 -u bbe_rw -paTh6TzgI -D bbedb --auto-rehash'
+alias localdb='mysql -u bbe -h localhost bbedb -ptest --auto-rehash'
+alias glstageftp='mc . ftp://10.64.82.12'
+alias gltestftp='mc . ftp://dev-jenkins-int.maxdome.de'
+alias cbscp='mc . sh://hardik@challubox.mooo.com:/home/hardik'
+alias stagetunnel='ssh -f -L 18080:lnxv-5262:18080 hmehta@mxd-jump -N'
+alias livetunnel='ssh -f -L 18080:lnxv-5514.srv.mediaways.net:18080 hmehta@mxd-jump -N'
+alias toolstunnelstage='ssh -f -L 28080:lnxv-5265:18080 hmehta@mxd-jump -N'
+alias toolstunnellive='ssh -f -L 28080:lnxv-5509:18080 hmehta@mxd-jump -N'
+alias crmtunnellive='ssh -f -L 28080:lnxv-5522:18080 hmehta@mxd-jump -N'
+alias dblivetunnel='ssh -f -L 13306:10.64.81.10:3306 hmehta@mxd-jump -N'
+alias dbstagetunnel='ssh -f -L 23306:lnxv-5270:3306 hmehta@mxd-jump -N'
+alias dbtesttunnel='ssh -f -L 33306:lnxv-5855:3306 hmehta@mxd-jump -N'
+
+function logf () 
+{ 
+    tail -100f $1 | perl -ple 's/^.*SEVERE.*$/\e[1;37;45m$&\e[0m/ || s/^.*ERROR.*$/\e[1;37;41m$&\e[0m/ || s/^.*WARN.*$/\e[1;33;40m$&\e[0m/'
+}
